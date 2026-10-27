@@ -1,0 +1,122 @@
+{
+  "resource_pack_name": "SkySaga",
+  "texture_data": {
+    "cobalt_sword": {
+      "textures": "textures/items/cobalt_sword"
+    },
+    "cobalt_pickaxe": {
+      "textures": "textures/items/cobalt_pickaxe"
+    },
+    "cobalt_axe": {
+      "textures": "textures/items/cobalt_axe"
+    },
+    "cobalt_shovel": {
+      "textures": "textures/items/cobalt_shovel"
+    },
+    "cobalt_hoe": {
+      "textures": "textures/items/cobalt_hoe"
+    },
+    "cobalt_ingot": {
+      "textures": "textures/items/cobalt_ingot"
+    },
+    "cobalt_shard": {
+      "textures": "textures/items/cobalt_shard"
+    },
+    "cobalt_powder": {
+      "textures": "textures/items/cobalt_powder"
+    },
+    "cobalt_helmet": {
+      "textures": "textures/items/cobalt_helmet"
+    },
+    "cobalt_chestplate": {
+      "textures": "textures/items/cobalt_chestplate"
+    },
+    "cobalt_leggings": {
+      "textures": "textures/items/cobalt_leggings"
+    },
+    "cobalt_boots": {
+      "textures": "textures/items/cobalt_boots"
+    },
+    "evolving_pickaxe_1": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_1"
+    },
+    "evolving_pickaxe_2": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_2"
+    },
+    "evolving_pickaxe_3": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_3"
+    },
+    "evolving_pickaxe_4": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_4"
+    },
+    "evolving_pickaxe_5": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_5"
+    },
+    "evolving_pickaxe_6": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_6"
+    },
+    "evolving_pickaxe_7": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_7"
+    },
+    "evolving_pickaxe_8": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_8"
+    },
+    "evolving_pickaxe_9": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_9"
+    },
+    "evolving_pickaxe_10": {
+      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_10"
+    },
+    "evolving_sword_1": {
+      "textures": "textures/items/evolving_sword/evolving_sword_1"
+    },
+    "evolving_sword_2": {
+      "textures": "textures/items/evolving_sword/evolving_sword_2"
+    },
+    "evolving_sword_3": {
+      "textures": "textures/items/evolving_sword/evolving_sword_3"
+    },
+    "evolving_sword_4": {
+      "textures": "textures/items/evolving_sword/evolving_sword_4"
+    },
+    "evolving_sword_5": {
+      "textures": "textures/items/evolving_sword/evolving_sword_5"
+    },
+    "evolving_sword_6": {
+      "textures": "textures/items/evolving_sword/evolving_sword_6"
+    },
+    "evolving_sword_7": {
+      "textures": "textures/items/evolving_sword/evolving_sword_7"
+    },
+    "evolving_sword_8": {
+      "textures": "textures/items/evolving_sword/evolving_sword_8"
+    },
+    "evolving_sword_9": {
+      "textures": "textures/items/evolving_sword/evolving_sword_9"
+    },
+    "evolving_sword_10": {
+      "textures": "textures/items/evolving_sword/evolving_sword_10"
+    },
+    "confirm": {
+      "textures": "textures/items/confirm"
+    },
+    "cancel": {
+      "textures": "textures/items/cancel"
+    },
+    "left": {
+      "textures": "textures/items/left"
+    },
+    "right": {
+      "textures": "textures/items/right"
+    },
+    "refresh": {
+      "textures": "textures/items/refresh"
+    },
+    "my_auctions": {
+      "textures": "textures/items/my_auctions"
+    },
+    "settings": {
+      "textures": "textures/items/settings"
+    }
+  }
+}

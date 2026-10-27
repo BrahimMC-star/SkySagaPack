@@ -1,0 +1,52 @@
+item.sky:cobalt_sword.name=Épée en Cobalt
+item.sky:cobalt_pickaxe.name=Pioche en Cobalt
+item.sky:cobalt_axe.name=Hache en Cobalt
+item.sky:cobalt_shovel.name=Pelle en Cobalt
+item.sky:cobalt_hoe.name=Houe en Cobalt
+item.sky:cobalt_ingot.name=Lingot en Cobalt
+item.sky:cobalt_shard.name=Écharde en Cobalt
+item.sky:cobalt_powder.name=Poussière en Cobalt
+tile.sky:cobalt_block.name=Bloc en Cobalt
+tile.sky:cobalt_ore.name=Minerai en Cobalt
+
+item.sky:evolving_pickaxe_1.name=§9Pioche Évolutive Nv. I
+item.sky:evolving_pickaxe_2.name=§sPioche Évolutive Nv. II
+item.sky:evolving_pickaxe_3.name=§aPioche Évolutive Nv. III
+item.sky:evolving_pickaxe_4.name=§qPioche Évolutive Nv. IV
+item.sky:evolving_pickaxe_5.name=§gPioche Évolutive Nv. V
+item.sky:evolving_pickaxe_6.name=§6Pioche Évolutive Nv. VI
+item.sky:evolving_pickaxe_7.name=§mPioche Évolutive Nv. VII
+item.sky:evolving_pickaxe_8.name=§dPioche Évolutive Nv. VIII
+item.sky:evolving_pickaxe_9.name=§uPioche Évolutive Nv. IX
+item.sky:evolving_pickaxe_10.name=§5Pioche Évolutive Nv. X
+
+item.sky:evolving_sword_1.name=§9Épée Évolutive Nv. I
+item.sky:evolving_sword_2.name=§sÉpée Évolutive Nv. II
+item.sky:evolving_sword_3.name=§aÉpée Évolutive Nv. III
+item.sky:evolving_sword_4.name=§qÉpée Évolutive Nv. IV
+item.sky:evolving_sword_5.name=§gÉpée Évolutive Nv. V
+item.sky:evolving_sword_6.name=§6Épée Évolutive Nv. VI
+item.sky:evolving_sword_7.name=§mÉpée Évolutive Nv. VII
+item.sky:evolving_sword_8.name=§dÉpée Évolutive Nv. VIII
+item.sky:evolving_sword_9.name=§uÉpée Évolutive Nv. IX
+item.sky:evolving_sword_10.name=§5Épée Évolutive Nv. X
+
+tile.sky:blaze_spawner.name=Générateur à §6Blaze
+tile.sky:cow_spawner.name=Générateur à §nVache
+tile.sky:creeper_spawner.name=Générateur à §qCreeper
+tile.sky:dolphin_spawner.name=Générateur à §bDauphin
+tile.sky:elder_guardian_spawner.name=Générateur de §3Gardien Ancien
+tile.sky:enderman_spawner.name=Générateur à §5Enderman
+tile.sky:guardian_spawner.name=Générateur de §sGardien
+tile.sky:iron_golem_spawner.name=Générateur à §aGolem de §7Fer
+tile.sky:pig_spawner.name=Générateur à §dCochon
+tile.sky:pigman_spawner.name=Générateur à §dPig§cman
+tile.sky:sheep_spawner.name=Générateur à §hMouton
+tile.sky:skeleton_spawner.name=Générateur à §7Squelette
+tile.sky:zombie_spawner.name=Générateur à §2Zombie
+tile.sky:vindicator_spawner.name=Générateur à §8Vindicateur
+tile.sky:pillager_spawner.name=Générateur à §8Pilleur
+
+itemGroup.name.spawner=Générateurs
+
+item.sky:settings.name=§7Paramètres

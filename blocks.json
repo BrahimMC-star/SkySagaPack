@@ -1,0 +1,62 @@
+{
+  "sky:cobalt_block": {
+    "textures": "cobalt_block",
+    "sound": "metal"
+  },
+  "sky:cobalt_ore": {
+    "textures": "cobalt_ore",
+    "sound": "stone"
+  },
+  "sky:blaze_spawner" :{
+    "textures": "blaze_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:cow_spawner" :{
+    "textures": "cow_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:creeper_spawner" :{
+    "textures": "creeper_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:dolphin_spawner" :{
+    "textures": "dolphin_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:elder_guardian_spawner" :{
+    "textures": "elder_guardian_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:enderman_spawner" :{
+    "textures": "enderman_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:guardian_spawner" :{
+    "textures": "guardian_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:iron_golem_spawner" :{
+    "textures": "iron_golem_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:pig_spawner" :{
+    "textures": "pig_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:pigman_spawner" :{
+    "textures": "pigman_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:sheep_spawner" :{
+    "textures": "sheep_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:skeleton_spawner" :{
+    "textures": "skeleton_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:zombie_spawner" :{
+    "textures": "zombie_spawner",
+    "sound": "monster_spawner"
+  }
+}

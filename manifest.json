@@ -1,0 +1,18 @@
+{
+  "format_version": 1,
+  "header": {
+    "description": "By br3him000",
+    "name": "SkySaga",
+    "uuid": "ba0bb372-43bd-4996-b556-b03e5e3a014b",
+    "version": [0, 0, 1],
+    "min_engine_version": [1, 2, 6]
+  },
+  "modules": [
+    {
+      "description": "By br3him000",
+      "version": [0, 0, 1],
+      "uuid": "4efb5510-e796-4720-8e1b-4236c389fef8",
+      "type": "resources"
+    }
+  ]
+}
