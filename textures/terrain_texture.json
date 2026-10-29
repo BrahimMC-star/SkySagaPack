@@ -9,44 +9,8 @@
     "cobalt_ore": {
       "textures": "textures/blocks/cobalt_ore"
     },
-    "blaze_spawner": {
-      "textures": "textures/blocks/spawners/blaze_spawner"
-    },
-    "cow_spawner": {
-      "textures": "textures/blocks/spawners/cow_spawner"
-    },
-    "creeper_spawner": {
-      "textures": "textures/blocks/spawners/creeper_spawner"
-    },
-    "dolphin_spawner": {
-      "textures": "textures/blocks/spawners/dolphin_spawner"
-    },
-    "elder_guardian_spawner": {
-      "textures": "textures/blocks/spawners/elder_guardian_spawner"
-    },
-    "enderman_spawner": {
-      "textures": "textures/blocks/spawners/enderman_spawner"
-    },
-    "guardian_spawner": {
-      "textures": "textures/blocks/spawners/guardian_spawner"
-    },
-    "iron_golem_spawner": {
-      "textures": "textures/blocks/spawners/iron_golem_spawner"
-    },
-    "pig_spawner": {
-      "textures": "textures/blocks/spawners/pig_spawner"
-    },
-    "pigman_spawner": {
-      "textures": "textures/blocks/spawners/pigman_spawner"
-    },
-    "sheep_spawner": {
-      "textures": "textures/blocks/spawners/sheep_spawner"
-    },
-    "skeleton_spawner": {
-      "textures": "textures/blocks/spawners/skeleton_spawner"
-    },
-    "zombie_spawner": {
-      "textures": "textures/blocks/spawners/zombie_spawner"
+    "sky_spawner": {
+      "textures": "textures/blocks/sky_spawner"
     }
   }
 }

@@ -8,55 +8,299 @@
     "sound": "stone"
   },
   "sky:blaze_spawner" :{
-    "textures": "blaze_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:cow_spawner" :{
-    "textures": "cow_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:creeper_spawner" :{
-    "textures": "creeper_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:dolphin_spawner" :{
-    "textures": "dolphin_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:elder_guardian_spawner" :{
-    "textures": "elder_guardian_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:enderman_spawner" :{
-    "textures": "enderman_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:guardian_spawner" :{
-    "textures": "guardian_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:iron_golem_spawner" :{
-    "textures": "iron_golem_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:pig_spawner" :{
-    "textures": "pig_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:pigman_spawner" :{
-    "textures": "pigman_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:sheep_spawner" :{
-    "textures": "sheep_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:skeleton_spawner" :{
-    "textures": "skeleton_spawner",
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   },
   "sky:zombie_spawner" :{
-    "textures": "zombie_spawner",
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:allay_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:armadillo_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:axolotl_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:bat_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:bee_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:camel_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:cat_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:chicken_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:copper_golem_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:donkey_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:fox_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:frog_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:glow_squid_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:goat_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:horse_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:llama_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:mooshroom_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:mule_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:nautilus_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:ocelot_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:panda_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:parrot_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:polar_bear_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:rabbit_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:skeleton_horse_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:sniffer_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:snow_golem_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:squid_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:strider_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:turtle_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:villager_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:wolf_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:zombie_horse_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:bogged_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:cave_spider_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:creaking_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:drowned_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:endermite_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:evoker_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:hoglin_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:husk_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:magma_cube_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:parched_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:piglin_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:silverfish_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:slime_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:spider_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:stray_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:sulfur_cube_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:vex_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:witch_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:zoglin_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:zombie_villager_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:breeze_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:piglin_brute_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:ravager_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:shulker_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:wither_skeleton_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:warden_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:vindicator_spawner" :{
+    "textures": "sky_spawner",
+    "sound": "monster_spawner"
+  },
+  "sky:pillager_spawner" :{
+    "textures": "sky_spawner",
     "sound": "monster_spawner"
   }
 }
