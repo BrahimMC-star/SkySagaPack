@@ -117,9 +117,6 @@
     },
     "settings": {
       "textures": "textures/items/settings"
-    },
-    "mobcoin": {
-      "textures": "textures/items/mobcoin"
     }
   }
 }
