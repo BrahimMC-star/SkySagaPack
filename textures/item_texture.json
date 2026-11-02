@@ -119,124 +119,124 @@
             "textures": "textures/items/settings"
         },
         "pet_silverfish": {
-            "textures": "textures/items/pets/pet_silverfish"
+            "textures": "textures/items/spawn_eggs/spawn_egg_silverfish"
         },
         "pet_cave_spider": {
-            "textures": "textures/items/pets/pet_cave_spider"
+            "textures": "textures/items/spawn_eggs/spawn_egg_cave_spider"
         },
         "pet_magma_cube": {
-            "textures": "textures/items/pets/pet_magma_cube"
+            "textures": "textures/items/spawn_eggs/spawn_egg_magma_cube"
         },
         "pet_iron_golem": {
-            "textures": "textures/items/pets/pet_iron_golem"
+            "textures": "textures/items/spawn_eggs/spawn_egg_iron_golem"
         },
         "pet_warden": {
-            "textures": "textures/items/pets/pet_warden"
+            "textures": "textures/items/spawn_eggs/spawn_egg_warden"
         },
         "pet_ocelot": {
-            "textures": "textures/items/pets/pet_ocelot"
+            "textures": "textures/items/spawn_eggs/spawn_egg_ocelot"
         },
         "pet_fox": {
-            "textures": "textures/items/pets/pet_fox"
+            "textures": "textures/items/spawn_eggs/spawn_egg_fox"
         },
         "pet_panda": {
-            "textures": "textures/items/pets/pet_panda"
+            "textures": "textures/items/spawn_eggs/spawn_egg_panda"
         },
         "pet_sniffer": {
-            "textures": "textures/items/pets/pet_sniffer"
+            "textures": "textures/items/spawn_eggs/spawn_egg_sniffer"
         },
         "pet_creaking": {
-            "textures": "textures/items/pets/pet_creaking"
+            "textures": "textures/items/spawn_eggs/spawn_egg_creaking"
         },
         "pet_wolf": {
-            "textures": "textures/items/pets/pet_wolf"
+            "textures": "textures/items/spawn_eggs/spawn_egg_wolf"
         },
         "pet_hoglin": {
-            "textures": "textures/items/pets/pet_hoglin"
+            "textures": "textures/items/spawn_eggs/spawn_egg_hoglin"
         },
         "pet_ravager": {
-            "textures": "textures/items/pets/pet_ravager"
+            "textures": "textures/items/spawn_eggs/spawn_egg_ravager"
         },
         "pet_wither_skeleton": {
-            "textures": "textures/items/pets/pet_wither_skeleton"
+            "textures": "textures/items/spawn_eggs/spawn_egg_wither_skeleton"
         },
         "pet_piglin_brute": {
-            "textures": "textures/items/pets/pet_piglin_brute"
+            "textures": "textures/items/spawn_eggs/spawn_egg_piglin_brute"
         },
         "pet_squid": {
-            "textures": "textures/items/pets/pet_squid"
+            "textures": "textures/items/spawn_eggs/spawn_egg_squid"
         },
         "pet_axolotl": {
-            "textures": "textures/items/pets/pet_axolotl"
+            "textures": "textures/items/spawn_eggs/spawn_egg_axolotl"
         },
         "pet_dolphin": {
-            "textures": "textures/items/pets/pet_dolphin"
+            "textures": "textures/items/spawn_eggs/spawn_egg_dolphin"
         },
         "pet_glow_squid": {
-            "textures": "textures/items/pets/pet_glow_squid"
+            "textures": "textures/items/spawn_eggs/spawn_egg_glow_squid"
         },
         "pet_elder_guardian": {
-            "textures": "textures/items/pets/pet_elder_guardian"
+            "textures": "textures/items/spawn_eggs/spawn_egg_elder_guardian"
         },
         "pet_bat": {
-            "textures": "textures/items/pets/pet_bat"
+            "textures": "textures/items/spawn_eggs/spawn_egg_bat"
         },
         "pet_parrot": {
-            "textures": "textures/items/pets/pet_parrot"
+            "textures": "textures/items/spawn_eggs/spawn_egg_parrot"
         },
         "pet_allay": {
-            "textures": "textures/items/pets/pet_allay"
+            "textures": "textures/items/spawn_eggs/spawn_egg_allay"
         },
         "pet_vex": {
-            "textures": "textures/items/pets/pet_vex"
+            "textures": "textures/items/spawn_eggs/spawn_egg_vex"
         },
         "pet_evoker": {
-            "textures": "textures/items/pets/pet_evoker"
+            "textures": "textures/items/spawn_eggs/spawn_egg_evoker"
         },
         "pet_slime": {
-            "textures": "textures/items/pets/pet_slime"
+            "textures": "textures/items/spawn_eggs/spawn_egg_slime"
         },
         "pet_frog": {
-            "textures": "textures/items/pets/pet_frog"
+            "textures": "textures/items/spawn_eggs/spawn_egg_frog"
         },
         "pet_bee": {
-            "textures": "textures/items/pets/pet_bee"
+            "textures": "textures/items/spawn_eggs/spawn_egg_bee"
         },
         "pet_witch": {
-            "textures": "textures/items/pets/pet_witch"
+            "textures": "textures/items/spawn_eggs/spawn_egg_witch"
         },
         "pet_breeze": {
-            "textures": "textures/items/pets/pet_breeze"
+            "textures": "textures/items/spawn_eggs/spawn_egg_breeze"
         },
         "pet_villager": {
-            "textures": "textures/items/pets/pet_villager"
+            "textures": "textures/items/spawn_eggs/spawn_egg_villager"
         },
         "pet_armadillo": {
-            "textures": "textures/items/pets/pet_armadillo"
+            "textures": "textures/items/spawn_eggs/spawn_egg_armadillo"
         },
         "pet_copper_golem": {
-            "textures": "textures/items/pets/pet_copper_golem"
+            "textures": "textures/items/spawn_eggs/spawn_egg_copper_golem"
         },
         "pet_goat": {
-            "textures": "textures/items/pets/pet_goat"
+            "textures": "textures/items/spawn_eggs/spawn_egg_goat"
         },
         "pet_camel": {
-            "textures": "textures/items/pets/pet_camel"
+            "textures": "textures/items/spawn_eggs/spawn_egg_camel"
         },
         "pet_pig": {
-            "textures": "textures/items/pets/pet_pig"
+            "textures": "textures/items/spawn_eggs/spawn_egg_pig"
         },
         "pet_sheep": {
-            "textures": "textures/items/pets/pet_sheep"
+            "textures": "textures/items/spawn_eggs/spawn_egg_sheep"
         },
         "pet_llama": {
-            "textures": "textures/items/pets/pet_llama"
+            "textures": "textures/items/spawn_eggs/spawn_egg_llama"
         },
         "pet_horse": {
-            "textures": "textures/items/pets/pet_horse"
+            "textures": "textures/items/spawn_eggs/spawn_egg_horse"
         },
         "pet_shulker": {
-            "textures": "textures/items/pets/pet_shulker"
+            "textures": "textures/items/spawn_eggs/spawn_egg_shulker"
         },
         "pet_egg_mineur": {
             "textures": "textures/items/pets/pet_egg_mineur"
