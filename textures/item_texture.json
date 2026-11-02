@@ -238,32 +238,20 @@
         "pet_shulker": {
             "textures": "textures/items/spawn_eggs/spawn_egg_shulker"
         },
-        "pet_egg_mineur": {
-            "textures": "textures/items/pets/pet_egg_mineur"
+        "pet_egg_common": {
+            "textures": "textures/items/pets/pet_egg_common"
         },
-        "pet_egg_bucheron": {
-            "textures": "textures/items/pets/pet_egg_bucheron"
+        "pet_egg_rare": {
+            "textures": "textures/items/pets/pet_egg_rare"
         },
-        "pet_egg_chasseur": {
-            "textures": "textures/items/pets/pet_egg_chasseur"
+        "pet_egg_epic": {
+            "textures": "textures/items/pets/pet_egg_epic"
         },
-        "pet_egg_pecheur": {
-            "textures": "textures/items/pets/pet_egg_pecheur"
+        "pet_egg_legendary": {
+            "textures": "textures/items/pets/pet_egg_legendary"
         },
-        "pet_egg_enchanteur": {
-            "textures": "textures/items/pets/pet_egg_enchanteur"
-        },
-        "pet_egg_alchimiste": {
-            "textures": "textures/items/pets/pet_egg_alchimiste"
-        },
-        "pet_egg_reparateur": {
-            "textures": "textures/items/pets/pet_egg_reparateur"
-        },
-        "pet_egg_construrier": {
-            "textures": "textures/items/pets/pet_egg_construrier"
-        },
-        "pet_egg_any": {
-            "textures": "textures/items/pets/pet_egg_any"
+        "pet_egg_mythic": {
+            "textures": "textures/items/pets/pet_egg_mythic"
         }
     }
 }

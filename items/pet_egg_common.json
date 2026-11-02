@@ -2,10 +2,10 @@
     "format_version": "1.12.0",
     "minecraft:item": {
         "description": {
-            "identifier": "sky:pet_egg_any"
+            "identifier": "sky:pet_egg_common"
         },
         "components": {
-            "minecraft:icon": "pet_egg_any"
+            "minecraft:icon": "pet_egg_common"
         }
     }
 }

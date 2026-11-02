@@ -2,10 +2,10 @@
     "format_version": "1.12.0",
     "minecraft:item": {
         "description": {
-            "identifier": "sky:pet_egg_pecheur"
+            "identifier": "sky:pet_egg_epic"
         },
         "components": {
-            "minecraft:icon": "pet_egg_pecheur"
+            "minecraft:icon": "pet_egg_epic"
         }
     }
 }
