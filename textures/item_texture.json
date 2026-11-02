@@ -1,122 +1,269 @@
 {
-  "resource_pack_name": "SkySaga",
-  "texture_data": {
-    "cobalt_sword": {
-      "textures": "textures/items/cobalt_sword"
-    },
-    "cobalt_pickaxe": {
-      "textures": "textures/items/cobalt_pickaxe"
-    },
-    "cobalt_axe": {
-      "textures": "textures/items/cobalt_axe"
-    },
-    "cobalt_shovel": {
-      "textures": "textures/items/cobalt_shovel"
-    },
-    "cobalt_hoe": {
-      "textures": "textures/items/cobalt_hoe"
-    },
-    "cobalt_ingot": {
-      "textures": "textures/items/cobalt_ingot"
-    },
-    "cobalt_shard": {
-      "textures": "textures/items/cobalt_shard"
-    },
-    "cobalt_powder": {
-      "textures": "textures/items/cobalt_powder"
-    },
-    "cobalt_helmet": {
-      "textures": "textures/items/cobalt_helmet"
-    },
-    "cobalt_chestplate": {
-      "textures": "textures/items/cobalt_chestplate"
-    },
-    "cobalt_leggings": {
-      "textures": "textures/items/cobalt_leggings"
-    },
-    "cobalt_boots": {
-      "textures": "textures/items/cobalt_boots"
-    },
-    "evolving_pickaxe_1": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_1"
-    },
-    "evolving_pickaxe_2": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_2"
-    },
-    "evolving_pickaxe_3": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_3"
-    },
-    "evolving_pickaxe_4": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_4"
-    },
-    "evolving_pickaxe_5": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_5"
-    },
-    "evolving_pickaxe_6": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_6"
-    },
-    "evolving_pickaxe_7": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_7"
-    },
-    "evolving_pickaxe_8": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_8"
-    },
-    "evolving_pickaxe_9": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_9"
-    },
-    "evolving_pickaxe_10": {
-      "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_10"
-    },
-    "evolving_sword_1": {
-      "textures": "textures/items/evolving_sword/evolving_sword_1"
-    },
-    "evolving_sword_2": {
-      "textures": "textures/items/evolving_sword/evolving_sword_2"
-    },
-    "evolving_sword_3": {
-      "textures": "textures/items/evolving_sword/evolving_sword_3"
-    },
-    "evolving_sword_4": {
-      "textures": "textures/items/evolving_sword/evolving_sword_4"
-    },
-    "evolving_sword_5": {
-      "textures": "textures/items/evolving_sword/evolving_sword_5"
-    },
-    "evolving_sword_6": {
-      "textures": "textures/items/evolving_sword/evolving_sword_6"
-    },
-    "evolving_sword_7": {
-      "textures": "textures/items/evolving_sword/evolving_sword_7"
-    },
-    "evolving_sword_8": {
-      "textures": "textures/items/evolving_sword/evolving_sword_8"
-    },
-    "evolving_sword_9": {
-      "textures": "textures/items/evolving_sword/evolving_sword_9"
-    },
-    "evolving_sword_10": {
-      "textures": "textures/items/evolving_sword/evolving_sword_10"
-    },
-    "confirm": {
-      "textures": "textures/items/confirm"
-    },
-    "cancel": {
-      "textures": "textures/items/cancel"
-    },
-    "left": {
-      "textures": "textures/items/left"
-    },
-    "right": {
-      "textures": "textures/items/right"
-    },
-    "refresh": {
-      "textures": "textures/items/refresh"
-    },
-    "my_auctions": {
-      "textures": "textures/items/my_auctions"
-    },
-    "settings": {
-      "textures": "textures/items/settings"
+    "resource_pack_name": "SkySaga",
+    "texture_data": {
+        "cobalt_sword": {
+            "textures": "textures/items/cobalt_sword"
+        },
+        "cobalt_pickaxe": {
+            "textures": "textures/items/cobalt_pickaxe"
+        },
+        "cobalt_axe": {
+            "textures": "textures/items/cobalt_axe"
+        },
+        "cobalt_shovel": {
+            "textures": "textures/items/cobalt_shovel"
+        },
+        "cobalt_hoe": {
+            "textures": "textures/items/cobalt_hoe"
+        },
+        "cobalt_ingot": {
+            "textures": "textures/items/cobalt_ingot"
+        },
+        "cobalt_shard": {
+            "textures": "textures/items/cobalt_shard"
+        },
+        "cobalt_powder": {
+            "textures": "textures/items/cobalt_powder"
+        },
+        "cobalt_helmet": {
+            "textures": "textures/items/cobalt_helmet"
+        },
+        "cobalt_chestplate": {
+            "textures": "textures/items/cobalt_chestplate"
+        },
+        "cobalt_leggings": {
+            "textures": "textures/items/cobalt_leggings"
+        },
+        "cobalt_boots": {
+            "textures": "textures/items/cobalt_boots"
+        },
+        "evolving_pickaxe_1": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_1"
+        },
+        "evolving_pickaxe_2": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_2"
+        },
+        "evolving_pickaxe_3": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_3"
+        },
+        "evolving_pickaxe_4": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_4"
+        },
+        "evolving_pickaxe_5": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_5"
+        },
+        "evolving_pickaxe_6": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_6"
+        },
+        "evolving_pickaxe_7": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_7"
+        },
+        "evolving_pickaxe_8": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_8"
+        },
+        "evolving_pickaxe_9": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_9"
+        },
+        "evolving_pickaxe_10": {
+            "textures": "textures/items/evolving_pickaxe/evolving_pickaxe_10"
+        },
+        "evolving_sword_1": {
+            "textures": "textures/items/evolving_sword/evolving_sword_1"
+        },
+        "evolving_sword_2": {
+            "textures": "textures/items/evolving_sword/evolving_sword_2"
+        },
+        "evolving_sword_3": {
+            "textures": "textures/items/evolving_sword/evolving_sword_3"
+        },
+        "evolving_sword_4": {
+            "textures": "textures/items/evolving_sword/evolving_sword_4"
+        },
+        "evolving_sword_5": {
+            "textures": "textures/items/evolving_sword/evolving_sword_5"
+        },
+        "evolving_sword_6": {
+            "textures": "textures/items/evolving_sword/evolving_sword_6"
+        },
+        "evolving_sword_7": {
+            "textures": "textures/items/evolving_sword/evolving_sword_7"
+        },
+        "evolving_sword_8": {
+            "textures": "textures/items/evolving_sword/evolving_sword_8"
+        },
+        "evolving_sword_9": {
+            "textures": "textures/items/evolving_sword/evolving_sword_9"
+        },
+        "evolving_sword_10": {
+            "textures": "textures/items/evolving_sword/evolving_sword_10"
+        },
+        "confirm": {
+            "textures": "textures/items/confirm"
+        },
+        "cancel": {
+            "textures": "textures/items/cancel"
+        },
+        "left": {
+            "textures": "textures/items/left"
+        },
+        "right": {
+            "textures": "textures/items/right"
+        },
+        "refresh": {
+            "textures": "textures/items/refresh"
+        },
+        "my_auctions": {
+            "textures": "textures/items/my_auctions"
+        },
+        "settings": {
+            "textures": "textures/items/settings"
+        },
+        "pet_silverfish": {
+            "textures": "textures/items/pets/pet_silverfish"
+        },
+        "pet_cave_spider": {
+            "textures": "textures/items/pets/pet_cave_spider"
+        },
+        "pet_magma_cube": {
+            "textures": "textures/items/pets/pet_magma_cube"
+        },
+        "pet_iron_golem": {
+            "textures": "textures/items/pets/pet_iron_golem"
+        },
+        "pet_warden": {
+            "textures": "textures/items/pets/pet_warden"
+        },
+        "pet_ocelot": {
+            "textures": "textures/items/pets/pet_ocelot"
+        },
+        "pet_fox": {
+            "textures": "textures/items/pets/pet_fox"
+        },
+        "pet_panda": {
+            "textures": "textures/items/pets/pet_panda"
+        },
+        "pet_sniffer": {
+            "textures": "textures/items/pets/pet_sniffer"
+        },
+        "pet_creaking": {
+            "textures": "textures/items/pets/pet_creaking"
+        },
+        "pet_wolf": {
+            "textures": "textures/items/pets/pet_wolf"
+        },
+        "pet_hoglin": {
+            "textures": "textures/items/pets/pet_hoglin"
+        },
+        "pet_ravager": {
+            "textures": "textures/items/pets/pet_ravager"
+        },
+        "pet_wither_skeleton": {
+            "textures": "textures/items/pets/pet_wither_skeleton"
+        },
+        "pet_piglin_brute": {
+            "textures": "textures/items/pets/pet_piglin_brute"
+        },
+        "pet_squid": {
+            "textures": "textures/items/pets/pet_squid"
+        },
+        "pet_axolotl": {
+            "textures": "textures/items/pets/pet_axolotl"
+        },
+        "pet_dolphin": {
+            "textures": "textures/items/pets/pet_dolphin"
+        },
+        "pet_glow_squid": {
+            "textures": "textures/items/pets/pet_glow_squid"
+        },
+        "pet_elder_guardian": {
+            "textures": "textures/items/pets/pet_elder_guardian"
+        },
+        "pet_bat": {
+            "textures": "textures/items/pets/pet_bat"
+        },
+        "pet_parrot": {
+            "textures": "textures/items/pets/pet_parrot"
+        },
+        "pet_allay": {
+            "textures": "textures/items/pets/pet_allay"
+        },
+        "pet_vex": {
+            "textures": "textures/items/pets/pet_vex"
+        },
+        "pet_evoker": {
+            "textures": "textures/items/pets/pet_evoker"
+        },
+        "pet_slime": {
+            "textures": "textures/items/pets/pet_slime"
+        },
+        "pet_frog": {
+            "textures": "textures/items/pets/pet_frog"
+        },
+        "pet_bee": {
+            "textures": "textures/items/pets/pet_bee"
+        },
+        "pet_witch": {
+            "textures": "textures/items/pets/pet_witch"
+        },
+        "pet_breeze": {
+            "textures": "textures/items/pets/pet_breeze"
+        },
+        "pet_villager": {
+            "textures": "textures/items/pets/pet_villager"
+        },
+        "pet_armadillo": {
+            "textures": "textures/items/pets/pet_armadillo"
+        },
+        "pet_copper_golem": {
+            "textures": "textures/items/pets/pet_copper_golem"
+        },
+        "pet_goat": {
+            "textures": "textures/items/pets/pet_goat"
+        },
+        "pet_camel": {
+            "textures": "textures/items/pets/pet_camel"
+        },
+        "pet_pig": {
+            "textures": "textures/items/pets/pet_pig"
+        },
+        "pet_sheep": {
+            "textures": "textures/items/pets/pet_sheep"
+        },
+        "pet_llama": {
+            "textures": "textures/items/pets/pet_llama"
+        },
+        "pet_horse": {
+            "textures": "textures/items/pets/pet_horse"
+        },
+        "pet_shulker": {
+            "textures": "textures/items/pets/pet_shulker"
+        },
+        "pet_egg_mineur": {
+            "textures": "textures/items/pets/pet_egg_mineur"
+        },
+        "pet_egg_bucheron": {
+            "textures": "textures/items/pets/pet_egg_bucheron"
+        },
+        "pet_egg_chasseur": {
+            "textures": "textures/items/pets/pet_egg_chasseur"
+        },
+        "pet_egg_pecheur": {
+            "textures": "textures/items/pets/pet_egg_pecheur"
+        },
+        "pet_egg_enchanteur": {
+            "textures": "textures/items/pets/pet_egg_enchanteur"
+        },
+        "pet_egg_alchimiste": {
+            "textures": "textures/items/pets/pet_egg_alchimiste"
+        },
+        "pet_egg_reparateur": {
+            "textures": "textures/items/pets/pet_egg_reparateur"
+        },
+        "pet_egg_construrier": {
+            "textures": "textures/items/pets/pet_egg_construrier"
+        },
+        "pet_egg_any": {
+            "textures": "textures/items/pets/pet_egg_any"
+        }
     }
-  }
 }
