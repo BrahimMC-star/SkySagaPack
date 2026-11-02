@@ -112,7 +112,7 @@ item.sky:settings.name=§7Paramètres
 
 enchantment.arrowDamage=§7Puissance
 enchantment.arrowFire=§7Flamme
-enchantment.arrowInfinite=§7Infinité
+enchantment.arrowInfinite=§7Auto-Vente
 enchantment.arrowKnockback=§7Frappe
 enchantment.crossbowMultishot=§7Tir multiple
 enchantment.crossbowPiercing=§7Perforation
