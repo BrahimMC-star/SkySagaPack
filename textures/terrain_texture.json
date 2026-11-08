@@ -11,6 +11,23 @@
     },
     "sky_spawner": {
       "textures": "textures/blocks/sky_spawner"
-    }
+    },
+    "glass_pane": { "textures": "textures/blocks/glass" },
+    "white_stained_glass_pane": { "textures": "textures/blocks/glass_white" },
+    "orange_stained_glass_pane": { "textures": "textures/blocks/glass_orange" },
+    "magenta_stained_glass_pane": { "textures": "textures/blocks/glass_magenta" },
+    "light_blue_stained_glass_pane": { "textures": "textures/blocks/glass_light_blue" },
+    "yellow_stained_glass_pane": { "textures": "textures/blocks/glass_yellow" },
+    "lime_stained_glass_pane": { "textures": "textures/blocks/glass_lime" },
+    "pink_stained_glass_pane": { "textures": "textures/blocks/glass_pink" },
+    "gray_stained_glass_pane": { "textures": "textures/blocks/glass_gray" },
+    "light_gray_stained_glass_pane": { "textures": "textures/blocks/glass_silver" },
+    "cyan_stained_glass_pane": { "textures": "textures/blocks/glass_cyan" },
+    "purple_stained_glass_pane": { "textures": "textures/blocks/glass_purple" },
+    "blue_stained_glass_pane": { "textures": "textures/blocks/glass_blue" },
+    "brown_stained_glass_pane": { "textures": "textures/blocks/glass_brown" },
+    "green_stained_glass_pane": { "textures": "textures/blocks/glass_green" },
+    "red_stained_glass_pane": { "textures": "textures/blocks/glass_red" },
+    "black_stained_glass_pane": { "textures": "textures/blocks/glass_black" }
   }
 }

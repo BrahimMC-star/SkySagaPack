@@ -302,5 +302,22 @@
   "sky:pillager_spawner" :{
     "textures": "sky_spawner",
     "sound": "monster_spawner"
-  }
+  },
+  "sky:glass_pane": { "sound": "glass" },
+  "sky:white_stained_glass_pane": { "sound": "glass" },
+  "sky:orange_stained_glass_pane": { "sound": "glass" },
+  "sky:magenta_stained_glass_pane": { "sound": "glass" },
+  "sky:light_blue_stained_glass_pane": { "sound": "glass" },
+  "sky:yellow_stained_glass_pane": { "sound": "glass" },
+  "sky:lime_stained_glass_pane": { "sound": "glass" },
+  "sky:pink_stained_glass_pane": { "sound": "glass" },
+  "sky:gray_stained_glass_pane": { "sound": "glass" },
+  "sky:light_gray_stained_glass_pane": { "sound": "glass" },
+  "sky:cyan_stained_glass_pane": { "sound": "glass" },
+  "sky:purple_stained_glass_pane": { "sound": "glass" },
+  "sky:blue_stained_glass_pane": { "sound": "glass" },
+  "sky:brown_stained_glass_pane": { "sound": "glass" },
+  "sky:green_stained_glass_pane": { "sound": "glass" },
+  "sky:red_stained_glass_pane": { "sound": "glass" },
+  "sky:black_stained_glass_pane": { "sound": "glass" }
 }
