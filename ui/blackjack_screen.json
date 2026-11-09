@@ -357,9 +357,8 @@
       },
       {
         "felt_d": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -370,14 +369,105 @@
             0,
             37
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "felt_p": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -388,7 +478,99 @@
             0,
             73
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
@@ -602,9 +784,8 @@
       },
       {
         "felt_d": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -615,14 +796,105 @@
             0,
             37
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "felt_p": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -633,7 +905,99 @@
             0,
             73
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
@@ -805,9 +1169,8 @@
       },
       {
         "felt_d": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -818,14 +1181,105 @@
             0,
             37
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "felt_p": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -836,7 +1290,99 @@
             0,
             73
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
@@ -1008,9 +1554,8 @@
       },
       {
         "felt_d": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -1021,14 +1566,105 @@
             0,
             37
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "felt_p": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -1039,7 +1675,99 @@
             0,
             73
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
@@ -1211,9 +1939,8 @@
       },
       {
         "felt_d": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -1224,14 +1951,105 @@
             0,
             37
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "felt_p": {
-          "type": "image",
-          "texture": "textures/ui/green",
-          "alpha": 0.35,
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": [
             162,
             18
@@ -1242,7 +2060,99 @@
             0,
             73
           ],
-          "layer": 3
+          "layer": 3,
+          "controls": [
+            {
+              "c0": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c1": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c2": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c3": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c4": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c5": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c6": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c7": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            },
+            {
+              "c8": {
+                "type": "image",
+                "texture": "textures/ui/button_borderless_dark",
+                "size": [
+                  18,
+                  18
+                ]
+              }
+            }
+          ]
         }
       },
       {
