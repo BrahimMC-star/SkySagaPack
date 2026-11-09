@@ -25,11 +25,6 @@
     ],
     "layer": 1,
     "$bj_kw": "bj_table",
-    "$e_dealer": "('%.8s' * (#container_title - '$bj_kw'))",
-    "$e_player": "('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))",
-    "$e_dv": "('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))",
-    "$e_pv": "('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))",
-    "$e_msg": "('%s' * (((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))) - ('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))))",
     "controls": [
       {
         "bg@mines_ui.frame_bg": {}
@@ -77,14 +72,14 @@
             62,
             19
           ],
+          "collection_name": "container_items",
+          "collection_index": 11,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -107,14 +102,14 @@
             8,
             28
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dealer",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -157,14 +152,14 @@
             62,
             64
           ],
+          "collection_name": "container_items",
+          "collection_index": 12,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_pv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -187,14 +182,14 @@
             8,
             73
           ],
+          "collection_name": "container_items",
+          "collection_index": 10,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_player",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -217,14 +212,14 @@
             0,
             109
           ],
+          "collection_name": "container_items",
+          "collection_index": 13,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_msg",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -315,25 +310,61 @@
         }
       },
       {
-        "dbg": {
+        "dbg1": {
           "type": "label",
-          "text": "#container_title",
+          "text": "",
           "color": [
             0.6,
             0.6,
             0.6
           ],
+          "shadow": true,
           "font_scale_factor": 0.4,
-          "layer": 6,
+          "layer": 4,
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [
             4,
             -1
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            }
+          ]
+        }
+      },
+      {
+        "dbg2": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.6,
+            0.6,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.4,
+          "layer": 4,
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [
+            -4,
+            -1
+          ],
+          "collection_name": "container_items",
+          "collection_index": 9,
+          "bindings": [
+            {
+              "binding_name": "#item_name",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -348,11 +379,6 @@
     ],
     "layer": 1,
     "$bj_kw": "bj_blackjack",
-    "$e_dealer": "('%.8s' * (#container_title - '$bj_kw'))",
-    "$e_player": "('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))",
-    "$e_dv": "('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))",
-    "$e_pv": "('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))",
-    "$e_msg": "('%s' * (((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))) - ('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))))",
     "controls": [
       {
         "bg@mines_ui.frame_bg": {}
@@ -415,14 +441,14 @@
             62,
             19
           ],
+          "collection_name": "container_items",
+          "collection_index": 11,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -445,14 +471,14 @@
             8,
             28
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dealer",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -495,14 +521,14 @@
             62,
             64
           ],
+          "collection_name": "container_items",
+          "collection_index": 12,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_pv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -525,14 +551,14 @@
             8,
             73
           ],
+          "collection_name": "container_items",
+          "collection_index": 10,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_player",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -555,14 +581,14 @@
             0,
             109
           ],
+          "collection_name": "container_items",
+          "collection_index": 13,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_msg",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -628,25 +654,61 @@
         }
       },
       {
-        "dbg": {
+        "dbg1": {
           "type": "label",
-          "text": "#container_title",
+          "text": "",
           "color": [
             0.6,
             0.6,
             0.6
           ],
+          "shadow": true,
           "font_scale_factor": 0.4,
-          "layer": 6,
+          "layer": 4,
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [
             4,
             -1
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            }
+          ]
+        }
+      },
+      {
+        "dbg2": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.6,
+            0.6,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.4,
+          "layer": 4,
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [
+            -4,
+            -1
+          ],
+          "collection_name": "container_items",
+          "collection_index": 9,
+          "bindings": [
+            {
+              "binding_name": "#item_name",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -661,11 +723,6 @@
     ],
     "layer": 1,
     "$bj_kw": "bj_win",
-    "$e_dealer": "('%.8s' * (#container_title - '$bj_kw'))",
-    "$e_player": "('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))",
-    "$e_dv": "('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))",
-    "$e_pv": "('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))",
-    "$e_msg": "('%s' * (((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))) - ('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))))",
     "controls": [
       {
         "bg@mines_ui.frame_bg": {}
@@ -728,14 +785,14 @@
             62,
             19
           ],
+          "collection_name": "container_items",
+          "collection_index": 11,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -758,14 +815,14 @@
             8,
             28
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dealer",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -808,14 +865,14 @@
             62,
             64
           ],
+          "collection_name": "container_items",
+          "collection_index": 12,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_pv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -838,14 +895,14 @@
             8,
             73
           ],
+          "collection_name": "container_items",
+          "collection_index": 10,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_player",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -868,14 +925,14 @@
             0,
             109
           ],
+          "collection_name": "container_items",
+          "collection_index": 13,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_msg",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -941,25 +998,61 @@
         }
       },
       {
-        "dbg": {
+        "dbg1": {
           "type": "label",
-          "text": "#container_title",
+          "text": "",
           "color": [
             0.6,
             0.6,
             0.6
           ],
+          "shadow": true,
           "font_scale_factor": 0.4,
-          "layer": 6,
+          "layer": 4,
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [
             4,
             -1
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            }
+          ]
+        }
+      },
+      {
+        "dbg2": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.6,
+            0.6,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.4,
+          "layer": 4,
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [
+            -4,
+            -1
+          ],
+          "collection_name": "container_items",
+          "collection_index": 9,
+          "bindings": [
+            {
+              "binding_name": "#item_name",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -974,11 +1067,6 @@
     ],
     "layer": 1,
     "$bj_kw": "bj_lose",
-    "$e_dealer": "('%.8s' * (#container_title - '$bj_kw'))",
-    "$e_player": "('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))",
-    "$e_dv": "('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))",
-    "$e_pv": "('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))",
-    "$e_msg": "('%s' * (((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))) - ('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))))",
     "controls": [
       {
         "bg@mines_ui.frame_bg": {}
@@ -1041,14 +1129,14 @@
             62,
             19
           ],
+          "collection_name": "container_items",
+          "collection_index": 11,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1071,14 +1159,14 @@
             8,
             28
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dealer",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1121,14 +1209,14 @@
             62,
             64
           ],
+          "collection_name": "container_items",
+          "collection_index": 12,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_pv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1151,14 +1239,14 @@
             8,
             73
           ],
+          "collection_name": "container_items",
+          "collection_index": 10,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_player",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1181,14 +1269,14 @@
             0,
             109
           ],
+          "collection_name": "container_items",
+          "collection_index": 13,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_msg",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1254,25 +1342,61 @@
         }
       },
       {
-        "dbg": {
+        "dbg1": {
           "type": "label",
-          "text": "#container_title",
+          "text": "",
           "color": [
             0.6,
             0.6,
             0.6
           ],
+          "shadow": true,
           "font_scale_factor": 0.4,
-          "layer": 6,
+          "layer": 4,
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [
             4,
             -1
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            }
+          ]
+        }
+      },
+      {
+        "dbg2": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.6,
+            0.6,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.4,
+          "layer": 4,
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [
+            -4,
+            -1
+          ],
+          "collection_name": "container_items",
+          "collection_index": 9,
+          "bindings": [
+            {
+              "binding_name": "#item_name",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1287,11 +1411,6 @@
     ],
     "layer": 1,
     "$bj_kw": "bj_push",
-    "$e_dealer": "('%.8s' * (#container_title - '$bj_kw'))",
-    "$e_player": "('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))",
-    "$e_dv": "('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))",
-    "$e_pv": "('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))",
-    "$e_msg": "('%s' * (((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))) - ('%.2s' * ((((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))) - ('%.2s' * (((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))) - ('%.8s' * ((#container_title - '$bj_kw') - ('%.8s' * (#container_title - '$bj_kw'))))))))))",
     "controls": [
       {
         "bg@mines_ui.frame_bg": {}
@@ -1354,14 +1473,14 @@
             62,
             19
           ],
+          "collection_name": "container_items",
+          "collection_index": 11,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1384,14 +1503,14 @@
             8,
             28
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_dealer",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1434,14 +1553,14 @@
             62,
             64
           ],
+          "collection_name": "container_items",
+          "collection_index": 12,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_pv",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1464,14 +1583,14 @@
             8,
             73
           ],
+          "collection_name": "container_items",
+          "collection_index": 10,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_player",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1494,14 +1613,14 @@
             0,
             109
           ],
+          "collection_name": "container_items",
+          "collection_index": 13,
           "bindings": [
             {
-              "binding_name": "#container_title"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "$e_msg",
-              "target_property_name": "#text"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
@@ -1567,25 +1686,61 @@
         }
       },
       {
-        "dbg": {
+        "dbg1": {
           "type": "label",
-          "text": "#container_title",
+          "text": "",
           "color": [
             0.6,
             0.6,
             0.6
           ],
+          "shadow": true,
           "font_scale_factor": 0.4,
-          "layer": 6,
+          "layer": 4,
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [
             4,
             -1
           ],
+          "collection_name": "container_items",
+          "collection_index": 9,
           "bindings": [
             {
-              "binding_name": "#container_title"
+              "binding_name": "#hover_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            }
+          ]
+        }
+      },
+      {
+        "dbg2": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.6,
+            0.6,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.4,
+          "layer": 4,
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [
+            -4,
+            -1
+          ],
+          "collection_name": "container_items",
+          "collection_index": 9,
+          "bindings": [
+            {
+              "binding_name": "#item_name",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
             }
           ]
         }
