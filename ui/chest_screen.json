@@ -1,0 +1,123 @@
+{
+  "namespace": "chest",
+
+  // Copie du large_chest_panel vanilla, utilisee pour tous les coffres normaux
+  "vanilla_large_chest_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [ 176, 220 ],
+          "layer": 1,
+          "controls": [
+            { "common_panel@common.common_panel": {} },
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "large_chest_panel_top_half@chest.large_chest_panel_top_half": {} },
+                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+                  { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  // Le double coffre choisit son affichage selon le titre : "mines_ui" => ecran sombre des Mines
+  "large_chest_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "normal_variant@chest.vanilla_large_chest_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(('$container_title' - 'mines_ui') = '$container_title')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mines_variant@mines_ui.mines_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (('$container_title' - 'mines_ui') = '$container_title'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  // Meme logique pour l'interface mobile (pocket)
+  "pocket_large_chest_wrapper": {
+    "type": "panel",
+    "controls": [
+      {
+        "normal_variant@pocket_containers.large_chest_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(('$container_title' - 'mines_ui') = '$container_title')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mines_variant@mines_ui.mines_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (('$container_title' - 'mines_ui') = '$container_title'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "large_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "$use_custom_pocket_toast|default": false,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "use_custom_pocket_toast": "$use_custom_pocket_toast",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.large_chest_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$screen_background_alpha": 0.4
+      },
+      {
+        "requires": "$pocket_screen",
+        "$use_custom_pocket_toast": true,
+        "$screen_content": "chest.pocket_large_chest_wrapper"
+      }
+    ]
+  }
+}
