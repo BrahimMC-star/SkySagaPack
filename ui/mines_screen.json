@@ -112,24 +112,12 @@
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls": [
-      {
-        "border": {
-          "type": "image",
-          "texture": "textures/ui/dialog_background_opaque",
-          "size": [ "100%", "100%" ],
-          "layer": 1
-        }
-      },
-      {
-        "inside": {
-          "type": "image",
-          "texture": "textures/ui/dark_bg",
-          "size": [ "100% - 8px", "100% - 8px" ],
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "layer": 2
-        }
-      }
+      { "o_a": { "type": "image", "texture": "textures/ui/Black", "size": [ "100% - 4px", "100%" ], "anchor_from": "center", "anchor_to": "center", "layer": 1 } },
+      { "o_b": { "type": "image", "texture": "textures/ui/Black", "size": [ "100% - 2px", "100% - 2px" ], "anchor_from": "center", "anchor_to": "center", "layer": 1 } },
+      { "o_c": { "type": "image", "texture": "textures/ui/Black", "size": [ "100%", "100% - 4px" ], "anchor_from": "center", "anchor_to": "center", "layer": 1 } },
+      { "i_a": { "type": "image", "texture": "textures/ui/dark_bg", "size": [ "100% - 8px", "100% - 4px" ], "anchor_from": "center", "anchor_to": "center", "layer": 2 } },
+      { "i_b": { "type": "image", "texture": "textures/ui/dark_bg", "size": [ "100% - 6px", "100% - 6px" ], "anchor_from": "center", "anchor_to": "center", "layer": 2 } },
+      { "i_c": { "type": "image", "texture": "textures/ui/dark_bg", "size": [ "100% - 4px", "100% - 8px" ], "anchor_from": "center", "anchor_to": "center", "layer": 2 } }
     ]
   },
 
