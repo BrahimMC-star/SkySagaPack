@@ -1,7 +1,6 @@
 {
   "namespace": "mines_ui",
 
-  // Fond d'une case : 18x18, sombre, remplace cell_image_panel (voir $background_images)
   "mines_cell_bg": {
     "type": "image",
     "texture": "textures/ui/button_borderless_dark",
@@ -14,7 +13,6 @@
     "$background_images": "mines_ui.mines_cell_bg"
   },
 
-  // Grille 9x6 (slots 0-53) : 45 cases de jeu + la ligne du bouton Encaisser (slot 49)
   "mines_grid": {
     "type": "grid",
     "size": [ 162, 108 ],
@@ -51,22 +49,15 @@
     ]
   },
 
-  // Titre = titre du menu sans le marqueur "mines_ui" (le plugin peut y mettre mise, mines...)
   "mines_title": {
     "type": "label",
-    "text": "#text",
+    "text": "Mines",
+    "color": [ 1.0, 0.85, 0.29 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 7 ],
     "shadow": true,
-    "layer": 4,
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_property_name": "('$container_title' - 'mines_ui')",
-        "target_property_name": "#text"
-      }
-    ]
+    "layer": 4
   },
 
   "mines_root": {
@@ -74,23 +65,8 @@
     "size": [ 190, 150 ],
     "layer": 1,
     "controls": [
-      {
-        "bg": {
-          "type": "image",
-          "texture": "textures/ui/dark_bg",
-          "size": [ "100%", "100%" ],
-          "layer": 1
-        }
-      },
-      {
-        "frame": {
-          "type": "image",
-          "texture": "textures/ui/button_borderless_dark",
-          "size": [ "100%", "100%" ],
-          "layer": 2
-        }
-      },
-      // Bandeau vert sous le slot 49 (Encaisser) : colonnes 4 a 6, derniere ligne
+      { "bg": { "type": "image", "texture": "textures/ui/dark_bg", "size": [ "100%", "100%" ], "layer": 1 } },
+      { "frame": { "type": "image", "texture": "textures/ui/button_borderless_dark", "size": [ "100%", "100%" ], "layer": 2 } },
       {
         "cashout_bar": {
           "type": "image",
@@ -105,11 +81,7 @@
       },
       { "mines_title@mines_ui.mines_title": {} },
       { "mines_legend@mines_ui.mines_legend": {} },
-      {
-        "mines_grid@mines_ui.mines_grid": {
-          "offset": [ 14, 32 ]
-        }
-      }
+      { "mines_grid@mines_ui.mines_grid": { "offset": [ 14, 32 ] } }
     ]
   },
 
