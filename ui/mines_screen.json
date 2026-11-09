@@ -30,7 +30,7 @@
     "type": "label",
     "text": "$glyph",
     "color": [ 1.0, 1.0, 1.0 ],
-    "font_scale_factor": 1.3,
+    "font_scale_factor": 0.6,
     "layer": 4
   },
 
@@ -50,9 +50,9 @@
     "layer": 4,
     "controls": [
       { "icon@mines_ui.legend_glyph": {} },
-      { "gap": { "type": "panel", "size": [ 3, 1 ] } },
+      { "gap": { "type": "panel", "size": [ 2, 1 ] } },
       { "word@mines_ui.legend_word": {} },
-      { "space": { "type": "panel", "size": [ 9, 1 ] } }
+      { "space": { "type": "panel", "size": [ 6, 1 ] } }
     ]
   },
 
@@ -99,21 +99,37 @@
 
   "bar": {
     "type": "image",
-    "texture": "textures/ui/button_borderless_light",
-    "color": "$bar_color",
+    "texture": "$bar_texture",
+    "alpha": "$bar_alpha",
     "size": [ 54, 18 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": "$bar_offset",
-    "layer": 2
+    "layer": 3
   },
 
   "frame_bg": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls": [
-      { "bg": { "type": "image", "texture": "textures/ui/dark_bg", "size": [ "100%", "100%" ], "layer": 1 } },
-      { "frame": { "type": "image", "texture": "textures/ui/button_borderless_dark", "size": [ "100%", "100%" ], "layer": 2 } }
+      {
+        "border": {
+          "type": "image",
+          "texture": "textures/ui/dialog_background_opaque",
+          "size": [ "100%", "100%" ],
+          "layer": 1
+        }
+      },
+      {
+        "inside": {
+          "type": "image",
+          "texture": "textures/ui/dark_bg",
+          "size": [ "100% - 8px", "100% - 8px" ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 2
+        }
+      }
     ]
   },
 
@@ -121,13 +137,13 @@
 
   "mines_root": {
     "type": "panel",
-    "size": [ 190, 152 ],
+    "size": [ 210, 152 ],
     "layer": 1,
     "controls": [
       { "bg@mines_ui.frame_bg": {} },
-      { "cashout_bar@mines_ui.bar": { "$bar_color": [ 0.25, 0.7, 0.35 ], "$bar_offset": [ 68, 109 ] } },
+      { "cashout_bar@mines_ui.bar": { "$bar_texture": "textures/ui/green", "$bar_alpha": 0.4, "$bar_offset": [ 78, 109 ] } },
       { "title@mines_ui.screen_title": { "$screen_title_text": "Mines" } },
-      { "grid@mines_ui.mines_grid": { "offset": [ 14, 19 ] } },
+      { "grid@mines_ui.mines_grid": { "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 19 ] } },
       { "legend@mines_ui.mines_legend": {} }
     ]
   },
@@ -136,14 +152,14 @@
 
   "setup_root": {
     "type": "panel",
-    "size": [ 190, 152 ],
+    "size": [ 210, 152 ],
     "layer": 1,
     "controls": [
       { "bg@mines_ui.frame_bg": {} },
-      { "cancel_bar@mines_ui.bar": { "$bar_color": [ 0.75, 0.25, 0.25 ], "$bar_offset": [ 14, 109 ] } },
-      { "start_bar@mines_ui.bar": { "$bar_color": [ 0.25, 0.7, 0.35 ], "$bar_offset": [ 68, 109 ] } },
+      { "cancel_bar@mines_ui.bar": { "$bar_texture": "textures/ui/button_red", "$bar_alpha": 0.55, "$bar_offset": [ 24, 109 ] } },
+      { "start_bar@mines_ui.bar": { "$bar_texture": "textures/ui/green", "$bar_alpha": 0.4, "$bar_offset": [ 78, 109 ] } },
       { "title@mines_ui.screen_title": { "$screen_title_text": "Nouvelle partie" } },
-      { "grid@mines_ui.mines_grid": { "offset": [ 14, 19 ] } },
+      { "grid@mines_ui.mines_grid": { "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 19 ] } },
       { "hint@mines_ui.setup_hint": {} }
     ]
   },
@@ -166,7 +182,7 @@
       },
       {
         "root_panel@common.root_panel": {
-          "size": [ 190, 152 ],
+          "size": [ 210, 152 ],
           "layer": 1,
           "controls": [
             { "mines_root@mines_ui.mines_root": {} },
@@ -195,7 +211,7 @@
       },
       {
         "root_panel@common.root_panel": {
-          "size": [ 190, 152 ],
+          "size": [ 210, 152 ],
           "layer": 1,
           "controls": [
             { "setup_root@mines_ui.setup_root": {} },
