@@ -1,16 +1,19 @@
 {
   "namespace": "chest",
-
   "large_chest_screen@common.inventory_screen_common": {
     "$close_on_player_hurt|default": true,
     "$use_custom_pocket_toast|default": false,
     "close_on_player_hurt": "$close_on_player_hurt",
     "use_custom_pocket_toast": "$use_custom_pocket_toast",
-
     "$keyword_mines": "mines_ui",
     "$keyword_mines_setup": "mines_setup",
     "$container_title_copy": "$container_title",
-
+    "$kw_bj_setup": "bj_setup",
+    "$kw_bj_table": "bj_table",
+    "$kw_bj_blackjack": "bj_blackjack",
+    "$kw_bj_win": "bj_win",
+    "$kw_bj_lose": "bj_lose",
+    "$kw_bj_push": "bj_push",
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -31,6 +34,36 @@
       {
         "requires": "(not (($container_title_copy - $keyword_mines_setup) = $container_title_copy))",
         "$screen_content": "mines_ui.setup_panel",
+        "$screen_background_alpha": 0.75
+      },
+      {
+        "requires": "(not (($container_title_copy - $kw_bj_setup) = $container_title_copy))",
+        "$screen_content": "blackjack_ui.setup_panel",
+        "$screen_background_alpha": 0.75
+      },
+      {
+        "requires": "(not (($container_title_copy - $kw_bj_table) = $container_title_copy))",
+        "$screen_content": "blackjack_ui.table_panel",
+        "$screen_background_alpha": 0.75
+      },
+      {
+        "requires": "(not (($container_title_copy - $kw_bj_blackjack) = $container_title_copy))",
+        "$screen_content": "blackjack_ui.result_panel_blackjack",
+        "$screen_background_alpha": 0.75
+      },
+      {
+        "requires": "(not (($container_title_copy - $kw_bj_win) = $container_title_copy))",
+        "$screen_content": "blackjack_ui.result_panel_win",
+        "$screen_background_alpha": 0.75
+      },
+      {
+        "requires": "(not (($container_title_copy - $kw_bj_lose) = $container_title_copy))",
+        "$screen_content": "blackjack_ui.result_panel_lose",
+        "$screen_background_alpha": 0.75
+      },
+      {
+        "requires": "(not (($container_title_copy - $kw_bj_push) = $container_title_copy))",
+        "$screen_content": "blackjack_ui.result_panel_push",
         "$screen_background_alpha": 0.75
       }
     ]

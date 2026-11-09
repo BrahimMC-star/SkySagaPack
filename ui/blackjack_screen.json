@@ -1,0 +1,1711 @@
+{
+  "namespace": "blackjack_ui",
+  "row_grid": {
+    "type": "grid",
+    "size": [
+      162,
+      18
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [
+      9,
+      1
+    ],
+    "maximum_grid_items": 9,
+    "grid_item_template": "mines_ui.mines_grid_item",
+    "collection_name": "container_items",
+    "layer": 4
+  },
+  "table_root": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "$bj_kw": "bj_table",
+    "$e_dealer": "('%.8s' * ($container_title - $bj_kw))",
+    "$e_player": "('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))",
+    "$e_dv": "('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))",
+    "$e_pv": "('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))",
+    "$e_msg": "('%s' * ((((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))) - ('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))))",
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title@mines_ui.screen_title": {
+          "$screen_title_text": "Blackjack"
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            19
+          ]
+        }
+      },
+      {
+        "dv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            19
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_d": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            28
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dealer",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            64
+          ]
+        }
+      },
+      {
+        "pv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            64
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_pv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_p": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            73
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_player",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "msg": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1.0,
+            0.85,
+            0.29
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            109
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_msg",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "grid@blackjack_ui.row_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            121
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Tirer",
+          "color": [
+            0.49,
+            0.71,
+            1.0
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            42,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Rester",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            78,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b2": {
+          "type": "label",
+          "text": "Doubler",
+          "color": [
+            1.0,
+            0.85,
+            0.29
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            114,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "result_root_blackjack": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "$bj_kw": "bj_blackjack",
+    "$e_dealer": "('%.8s' * ($container_title - $bj_kw))",
+    "$e_player": "('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))",
+    "$e_dv": "('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))",
+    "$e_pv": "('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))",
+    "$e_msg": "('%s' * ((((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))) - ('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))))",
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "BLACKJACK !",
+          "color": [
+            1.0,
+            0.85,
+            0.29
+          ],
+          "shadow": true,
+          "font_scale_factor": 1.5,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            3
+          ],
+          "layer": 4
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            19
+          ]
+        }
+      },
+      {
+        "dv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            19
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_d": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            28
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dealer",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            64
+          ]
+        }
+      },
+      {
+        "pv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            64
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_pv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_p": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            73
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_player",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "msg": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1.0,
+            0.85,
+            0.29
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            109
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_msg",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "grid@blackjack_ui.row_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            121
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Rejouer",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            60,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Quitter",
+          "color": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            96,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "result_root_win": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "$bj_kw": "bj_win",
+    "$e_dealer": "('%.8s' * ($container_title - $bj_kw))",
+    "$e_player": "('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))",
+    "$e_dv": "('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))",
+    "$e_pv": "('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))",
+    "$e_msg": "('%s' * ((((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))) - ('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))))",
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "GAGNÉ !",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 1.5,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            3
+          ],
+          "layer": 4
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            19
+          ]
+        }
+      },
+      {
+        "dv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            19
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_d": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            28
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dealer",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            64
+          ]
+        }
+      },
+      {
+        "pv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            64
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_pv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_p": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            73
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_player",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "msg": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            109
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_msg",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "grid@blackjack_ui.row_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            121
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Rejouer",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            60,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Quitter",
+          "color": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            96,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "result_root_lose": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "$bj_kw": "bj_lose",
+    "$e_dealer": "('%.8s' * ($container_title - $bj_kw))",
+    "$e_player": "('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))",
+    "$e_dv": "('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))",
+    "$e_pv": "('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))",
+    "$e_msg": "('%s' * ((((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))) - ('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))))",
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "PERDU",
+          "color": [
+            1.0,
+            0.42,
+            0.42
+          ],
+          "shadow": true,
+          "font_scale_factor": 1.5,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            3
+          ],
+          "layer": 4
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            19
+          ]
+        }
+      },
+      {
+        "dv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            19
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_d": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            28
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dealer",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            64
+          ]
+        }
+      },
+      {
+        "pv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            64
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_pv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_p": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            73
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_player",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "msg": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1.0,
+            0.42,
+            0.42
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            109
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_msg",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "grid@blackjack_ui.row_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            121
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Rejouer",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            60,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Quitter",
+          "color": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            96,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "result_root_push": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "$bj_kw": "bj_push",
+    "$e_dealer": "('%.8s' * ($container_title - $bj_kw))",
+    "$e_player": "('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))",
+    "$e_dv": "('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))",
+    "$e_pv": "('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))",
+    "$e_msg": "('%s' * ((((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))) - ('%.2s' * (((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))) - ('%.2s' * ((($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))) - ('%.8s' * (($container_title - $bj_kw) - ('%.8s' * ($container_title - $bj_kw))))))))))",
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "ÉGALITÉ",
+          "color": [
+            1.0,
+            0.62,
+            0.26
+          ],
+          "shadow": true,
+          "font_scale_factor": 1.5,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            3
+          ],
+          "layer": 4
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            19
+          ]
+        }
+      },
+      {
+        "dv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            19
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_d": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            28
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_dealer",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            64
+          ]
+        }
+      },
+      {
+        "pv": {
+          "type": "label",
+          "text": "",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            62,
+            64
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_pv",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "cards_p": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.7,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8,
+            73
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_player",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "msg": {
+          "type": "label",
+          "text": "",
+          "color": [
+            1.0,
+            0.62,
+            0.26
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 4,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            109
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$e_msg",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "grid@blackjack_ui.row_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            121
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Rejouer",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            60,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Quitter",
+          "color": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            96,
+            141
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "setup_root": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "cancel_bar@mines_ui.bar": {
+          "$bar_texture": "textures/ui/button_red",
+          "$bar_alpha": 0.55,
+          "$bar_offset": [
+            24,
+            109
+          ]
+        }
+      },
+      {
+        "start_bar@mines_ui.bar": {
+          "$bar_texture": "textures/ui/green",
+          "$bar_alpha": 0.4,
+          "$bar_offset": [
+            78,
+            109
+          ]
+        }
+      },
+      {
+        "title@mines_ui.screen_title": {
+          "$screen_title_text": "Blackjack"
+        }
+      },
+      {
+        "grid@mines_ui.mines_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            19
+          ]
+        }
+      },
+      {
+        "hint@mines_ui.setup_hint": {
+          "text": "Choisis ta mise · égalité = mise perdue"
+        }
+      }
+    ]
+  },
+  "setup_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [
+            210,
+            152
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "main@blackjack_ui.setup_root": {}
+            },
+            {
+              "flying_item_renderer@common.flying_item_renderer": {
+                "layer": 15
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "table_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [
+            210,
+            152
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "main@blackjack_ui.table_root": {}
+            },
+            {
+              "flying_item_renderer@common.flying_item_renderer": {
+                "layer": 15
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "result_panel_blackjack": {
+    "type": "panel",
+    "controls": [
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [
+            210,
+            152
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "main@blackjack_ui.result_root_blackjack": {}
+            },
+            {
+              "flying_item_renderer@common.flying_item_renderer": {
+                "layer": 15
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "result_panel_win": {
+    "type": "panel",
+    "controls": [
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [
+            210,
+            152
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "main@blackjack_ui.result_root_win": {}
+            },
+            {
+              "flying_item_renderer@common.flying_item_renderer": {
+                "layer": 15
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "result_panel_lose": {
+    "type": "panel",
+    "controls": [
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [
+            210,
+            152
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "main@blackjack_ui.result_root_lose": {}
+            },
+            {
+              "flying_item_renderer@common.flying_item_renderer": {
+                "layer": 15
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "result_panel_push": {
+    "type": "panel",
+    "controls": [
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [
+            210,
+            152
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "main@blackjack_ui.result_root_push": {}
+            },
+            {
+              "flying_item_renderer@common.flying_item_renderer": {
+                "layer": 15
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
