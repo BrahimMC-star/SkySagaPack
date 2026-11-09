@@ -1,1752 +1,5 @@
 {
   "namespace": "blackjack_ui",
-  "row_grid": {
-    "type": "grid",
-    "size": [
-      162,
-      18
-    ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "grid_dimensions": [
-      9,
-      1
-    ],
-    "maximum_grid_items": 9,
-    "grid_item_template": "mines_ui.mines_grid_item",
-    "collection_name": "container_items",
-    "layer": 4
-  },
-  "table_root": {
-    "type": "panel",
-    "size": [
-      210,
-      152
-    ],
-    "layer": 1,
-    "$bj_kw": "bj_table",
-    "controls": [
-      {
-        "bg@mines_ui.frame_bg": {}
-      },
-      {
-        "title@mines_ui.screen_title": {
-          "$screen_title_text": "Blackjack"
-        }
-      },
-      {
-        "cap_d": {
-          "type": "label",
-          "text": "Croupier",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            19
-          ]
-        }
-      },
-      {
-        "dv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            19
-          ],
-          "collection_name": "container_items",
-          "collection_index": 11,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_d": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            28
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cap_p": {
-          "type": "label",
-          "text": "Toi",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            64
-          ]
-        }
-      },
-      {
-        "pv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            64
-          ],
-          "collection_name": "container_items",
-          "collection_index": 12,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_p": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            73
-          ],
-          "collection_name": "container_items",
-          "collection_index": 10,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "msg": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1.0,
-            0.85,
-            0.29
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            109
-          ],
-          "collection_name": "container_items",
-          "collection_index": 13,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "grid@blackjack_ui.row_grid": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            121
-          ]
-        }
-      },
-      {
-        "b0": {
-          "type": "label",
-          "text": "Tirer",
-          "color": [
-            0.49,
-            0.71,
-            1.0
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            42,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "b1": {
-          "type": "label",
-          "text": "Rester",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            78,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "b2": {
-          "type": "label",
-          "text": "Doubler",
-          "color": [
-            1.0,
-            0.85,
-            0.29
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            114,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "dbg1": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [
-            4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "dbg2": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "offset": [
-            -4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#item_name",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "result_root_blackjack": {
-    "type": "panel",
-    "size": [
-      210,
-      152
-    ],
-    "layer": 1,
-    "$bj_kw": "bj_blackjack",
-    "controls": [
-      {
-        "bg@mines_ui.frame_bg": {}
-      },
-      {
-        "title": {
-          "type": "label",
-          "text": "BLACKJACK !",
-          "color": [
-            1.0,
-            0.85,
-            0.29
-          ],
-          "shadow": true,
-          "font_scale_factor": 1.5,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            3
-          ],
-          "layer": 4
-        }
-      },
-      {
-        "cap_d": {
-          "type": "label",
-          "text": "Croupier",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            19
-          ]
-        }
-      },
-      {
-        "dv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            19
-          ],
-          "collection_name": "container_items",
-          "collection_index": 11,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_d": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            28
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cap_p": {
-          "type": "label",
-          "text": "Toi",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            64
-          ]
-        }
-      },
-      {
-        "pv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            64
-          ],
-          "collection_name": "container_items",
-          "collection_index": 12,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_p": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            73
-          ],
-          "collection_name": "container_items",
-          "collection_index": 10,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "msg": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1.0,
-            0.85,
-            0.29
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            109
-          ],
-          "collection_name": "container_items",
-          "collection_index": 13,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "grid@blackjack_ui.row_grid": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            121
-          ]
-        }
-      },
-      {
-        "b0": {
-          "type": "label",
-          "text": "Rejouer",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            60,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "b1": {
-          "type": "label",
-          "text": "Quitter",
-          "color": [
-            1.0,
-            0.5,
-            0.5
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            96,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "dbg1": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [
-            4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "dbg2": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "offset": [
-            -4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#item_name",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "result_root_win": {
-    "type": "panel",
-    "size": [
-      210,
-      152
-    ],
-    "layer": 1,
-    "$bj_kw": "bj_win",
-    "controls": [
-      {
-        "bg@mines_ui.frame_bg": {}
-      },
-      {
-        "title": {
-          "type": "label",
-          "text": "GAGNÉ !",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 1.5,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            3
-          ],
-          "layer": 4
-        }
-      },
-      {
-        "cap_d": {
-          "type": "label",
-          "text": "Croupier",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            19
-          ]
-        }
-      },
-      {
-        "dv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            19
-          ],
-          "collection_name": "container_items",
-          "collection_index": 11,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_d": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            28
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cap_p": {
-          "type": "label",
-          "text": "Toi",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            64
-          ]
-        }
-      },
-      {
-        "pv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            64
-          ],
-          "collection_name": "container_items",
-          "collection_index": 12,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_p": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            73
-          ],
-          "collection_name": "container_items",
-          "collection_index": 10,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "msg": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            109
-          ],
-          "collection_name": "container_items",
-          "collection_index": 13,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "grid@blackjack_ui.row_grid": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            121
-          ]
-        }
-      },
-      {
-        "b0": {
-          "type": "label",
-          "text": "Rejouer",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            60,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "b1": {
-          "type": "label",
-          "text": "Quitter",
-          "color": [
-            1.0,
-            0.5,
-            0.5
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            96,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "dbg1": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [
-            4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "dbg2": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "offset": [
-            -4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#item_name",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "result_root_lose": {
-    "type": "panel",
-    "size": [
-      210,
-      152
-    ],
-    "layer": 1,
-    "$bj_kw": "bj_lose",
-    "controls": [
-      {
-        "bg@mines_ui.frame_bg": {}
-      },
-      {
-        "title": {
-          "type": "label",
-          "text": "PERDU",
-          "color": [
-            1.0,
-            0.42,
-            0.42
-          ],
-          "shadow": true,
-          "font_scale_factor": 1.5,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            3
-          ],
-          "layer": 4
-        }
-      },
-      {
-        "cap_d": {
-          "type": "label",
-          "text": "Croupier",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            19
-          ]
-        }
-      },
-      {
-        "dv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            19
-          ],
-          "collection_name": "container_items",
-          "collection_index": 11,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_d": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            28
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cap_p": {
-          "type": "label",
-          "text": "Toi",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            64
-          ]
-        }
-      },
-      {
-        "pv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            64
-          ],
-          "collection_name": "container_items",
-          "collection_index": 12,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_p": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            73
-          ],
-          "collection_name": "container_items",
-          "collection_index": 10,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "msg": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1.0,
-            0.42,
-            0.42
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            109
-          ],
-          "collection_name": "container_items",
-          "collection_index": 13,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "grid@blackjack_ui.row_grid": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            121
-          ]
-        }
-      },
-      {
-        "b0": {
-          "type": "label",
-          "text": "Rejouer",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            60,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "b1": {
-          "type": "label",
-          "text": "Quitter",
-          "color": [
-            1.0,
-            0.5,
-            0.5
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            96,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "dbg1": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [
-            4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "dbg2": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "offset": [
-            -4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#item_name",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "result_root_push": {
-    "type": "panel",
-    "size": [
-      210,
-      152
-    ],
-    "layer": 1,
-    "$bj_kw": "bj_push",
-    "controls": [
-      {
-        "bg@mines_ui.frame_bg": {}
-      },
-      {
-        "title": {
-          "type": "label",
-          "text": "ÉGALITÉ",
-          "color": [
-            1.0,
-            0.62,
-            0.26
-          ],
-          "shadow": true,
-          "font_scale_factor": 1.5,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            3
-          ],
-          "layer": 4
-        }
-      },
-      {
-        "cap_d": {
-          "type": "label",
-          "text": "Croupier",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            19
-          ]
-        }
-      },
-      {
-        "dv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            19
-          ],
-          "collection_name": "container_items",
-          "collection_index": 11,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_d": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            28
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cap_p": {
-          "type": "label",
-          "text": "Toi",
-          "color": [
-            0.66,
-            0.66,
-            0.74
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.8,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            64
-          ]
-        }
-      },
-      {
-        "pv": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            62,
-            64
-          ],
-          "collection_name": "container_items",
-          "collection_index": 12,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "cards_p": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "shadow": false,
-          "font_scale_factor": 0.7,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            8,
-            73
-          ],
-          "collection_name": "container_items",
-          "collection_index": 10,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "msg": {
-          "type": "label",
-          "text": "",
-          "color": [
-            1.0,
-            0.62,
-            0.26
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.9,
-          "layer": 4,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            109
-          ],
-          "collection_name": "container_items",
-          "collection_index": 13,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "grid@blackjack_ui.row_grid": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [
-            0,
-            121
-          ]
-        }
-      },
-      {
-        "b0": {
-          "type": "label",
-          "text": "Rejouer",
-          "color": [
-            0.49,
-            1.0,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            60,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "b1": {
-          "type": "label",
-          "text": "Quitter",
-          "color": [
-            1.0,
-            0.5,
-            0.5
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.75,
-          "layer": 4,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [
-            96,
-            141
-          ],
-          "size": [
-            54,
-            10
-          ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "dbg1": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [
-            4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      },
-      {
-        "dbg2": {
-          "type": "label",
-          "text": "",
-          "color": [
-            0.6,
-            0.6,
-            0.6
-          ],
-          "shadow": true,
-          "font_scale_factor": 0.4,
-          "layer": 4,
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "offset": [
-            -4,
-            -1
-          ],
-          "collection_name": "container_items",
-          "collection_index": 9,
-          "bindings": [
-            {
-              "binding_name": "#item_name",
-              "binding_name_override": "#text",
-              "binding_type": "collection",
-              "binding_collection_name": "container_items"
-            }
-          ]
-        }
-      }
-    ]
-  },
   "setup_root": {
     "type": "panel",
     "size": [
@@ -2054,6 +307,1076 @@
               "gamepad_cursor@common.gamepad_cursor_button": {}
             }
           ]
+        }
+      }
+    ]
+  },
+  "empty_bg": {
+    "type": "panel",
+    "size": [
+      18,
+      18
+    ],
+    "layer": 1
+  },
+  "bj_grid_item@common.container_item": {
+    "$item_collection_name": "container_items",
+    "$background_images": "blackjack_ui.empty_bg"
+  },
+  "bj_grid": {
+    "type": "grid",
+    "size": [
+      162,
+      108
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [
+      9,
+      6
+    ],
+    "grid_item_template": "blackjack_ui.bj_grid_item",
+    "collection_name": "container_items",
+    "layer": 4
+  },
+  "table_root": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title@mines_ui.screen_title": {
+          "$screen_title_text": "Blackjack"
+        }
+      },
+      {
+        "felt_d": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            37
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "felt_p": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            73
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            23
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            59
+          ]
+        }
+      },
+      {
+        "cell2": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            60,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cell4": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            96,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cell6": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            132,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "grid@blackjack_ui.bj_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            19
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Tirer",
+          "color": [
+            0.49,
+            0.71,
+            1.0
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            42,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Rester",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            78,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b2": {
+          "type": "label",
+          "text": "Doubler",
+          "color": [
+            1.0,
+            0.85,
+            0.29
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            114,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "result_root_blackjack": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "BLACKJACK !",
+          "color": [
+            1.0,
+            0.85,
+            0.29
+          ],
+          "shadow": true,
+          "font_scale_factor": 1.5,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            3
+          ],
+          "layer": 4
+        }
+      },
+      {
+        "felt_d": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            37
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "felt_p": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            73
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            23
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            59
+          ]
+        }
+      },
+      {
+        "cell3": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            78,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cell5": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            114,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "grid@blackjack_ui.bj_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            19
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Rejouer",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            60,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Quitter",
+          "color": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            96,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "result_root_win": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "GAGNÉ !",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 1.5,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            3
+          ],
+          "layer": 4
+        }
+      },
+      {
+        "felt_d": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            37
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "felt_p": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            73
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            23
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            59
+          ]
+        }
+      },
+      {
+        "cell3": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            78,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cell5": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            114,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "grid@blackjack_ui.bj_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            19
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Rejouer",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            60,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Quitter",
+          "color": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            96,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "result_root_lose": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "PERDU",
+          "color": [
+            1.0,
+            0.42,
+            0.42
+          ],
+          "shadow": true,
+          "font_scale_factor": 1.5,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            3
+          ],
+          "layer": 4
+        }
+      },
+      {
+        "felt_d": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            37
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "felt_p": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            73
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            23
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            59
+          ]
+        }
+      },
+      {
+        "cell3": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            78,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cell5": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            114,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "grid@blackjack_ui.bj_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            19
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Rejouer",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            60,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Quitter",
+          "color": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            96,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      }
+    ]
+  },
+  "result_root_push": {
+    "type": "panel",
+    "size": [
+      210,
+      152
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "bg@mines_ui.frame_bg": {}
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "ÉGALITÉ",
+          "color": [
+            1.0,
+            0.62,
+            0.26
+          ],
+          "shadow": true,
+          "font_scale_factor": 1.5,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            3
+          ],
+          "layer": 4
+        }
+      },
+      {
+        "felt_d": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            37
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "felt_p": {
+          "type": "image",
+          "texture": "textures/ui/green",
+          "alpha": 0.35,
+          "size": [
+            162,
+            18
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            73
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cap_d": {
+          "type": "label",
+          "text": "Croupier",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            23
+          ]
+        }
+      },
+      {
+        "cap_p": {
+          "type": "label",
+          "text": "Toi",
+          "color": [
+            0.66,
+            0.66,
+            0.74
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.8,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            26,
+            59
+          ]
+        }
+      },
+      {
+        "cell3": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            78,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "cell5": {
+          "type": "image",
+          "texture": "textures/ui/button_borderless_dark",
+          "size": [
+            18,
+            18
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            114,
+            109
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "grid@blackjack_ui.bj_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            19
+          ]
+        }
+      },
+      {
+        "b0": {
+          "type": "label",
+          "text": "Rejouer",
+          "color": [
+            0.49,
+            1.0,
+            0.6
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            60,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "b1": {
+          "type": "label",
+          "text": "Quitter",
+          "color": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.75,
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            96,
+            129
+          ],
+          "size": [
+            54,
+            10
+          ],
+          "text_alignment": "center"
         }
       }
     ]

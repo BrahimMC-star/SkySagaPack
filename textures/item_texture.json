@@ -252,6 +252,165 @@
         },
         "pet_egg_mythic": {
             "textures": "textures/items/pets/pet_egg_mythic"
+        },
+        "card_sa": {
+            "textures": "textures/items/cards/card_sa"
+        },
+        "card_s2": {
+            "textures": "textures/items/cards/card_s2"
+        },
+        "card_s3": {
+            "textures": "textures/items/cards/card_s3"
+        },
+        "card_s4": {
+            "textures": "textures/items/cards/card_s4"
+        },
+        "card_s5": {
+            "textures": "textures/items/cards/card_s5"
+        },
+        "card_s6": {
+            "textures": "textures/items/cards/card_s6"
+        },
+        "card_s7": {
+            "textures": "textures/items/cards/card_s7"
+        },
+        "card_s8": {
+            "textures": "textures/items/cards/card_s8"
+        },
+        "card_s9": {
+            "textures": "textures/items/cards/card_s9"
+        },
+        "card_s10": {
+            "textures": "textures/items/cards/card_s10"
+        },
+        "card_sj": {
+            "textures": "textures/items/cards/card_sj"
+        },
+        "card_sq": {
+            "textures": "textures/items/cards/card_sq"
+        },
+        "card_sk": {
+            "textures": "textures/items/cards/card_sk"
+        },
+        "card_ha": {
+            "textures": "textures/items/cards/card_ha"
+        },
+        "card_h2": {
+            "textures": "textures/items/cards/card_h2"
+        },
+        "card_h3": {
+            "textures": "textures/items/cards/card_h3"
+        },
+        "card_h4": {
+            "textures": "textures/items/cards/card_h4"
+        },
+        "card_h5": {
+            "textures": "textures/items/cards/card_h5"
+        },
+        "card_h6": {
+            "textures": "textures/items/cards/card_h6"
+        },
+        "card_h7": {
+            "textures": "textures/items/cards/card_h7"
+        },
+        "card_h8": {
+            "textures": "textures/items/cards/card_h8"
+        },
+        "card_h9": {
+            "textures": "textures/items/cards/card_h9"
+        },
+        "card_h10": {
+            "textures": "textures/items/cards/card_h10"
+        },
+        "card_hj": {
+            "textures": "textures/items/cards/card_hj"
+        },
+        "card_hq": {
+            "textures": "textures/items/cards/card_hq"
+        },
+        "card_hk": {
+            "textures": "textures/items/cards/card_hk"
+        },
+        "card_da": {
+            "textures": "textures/items/cards/card_da"
+        },
+        "card_d2": {
+            "textures": "textures/items/cards/card_d2"
+        },
+        "card_d3": {
+            "textures": "textures/items/cards/card_d3"
+        },
+        "card_d4": {
+            "textures": "textures/items/cards/card_d4"
+        },
+        "card_d5": {
+            "textures": "textures/items/cards/card_d5"
+        },
+        "card_d6": {
+            "textures": "textures/items/cards/card_d6"
+        },
+        "card_d7": {
+            "textures": "textures/items/cards/card_d7"
+        },
+        "card_d8": {
+            "textures": "textures/items/cards/card_d8"
+        },
+        "card_d9": {
+            "textures": "textures/items/cards/card_d9"
+        },
+        "card_d10": {
+            "textures": "textures/items/cards/card_d10"
+        },
+        "card_dj": {
+            "textures": "textures/items/cards/card_dj"
+        },
+        "card_dq": {
+            "textures": "textures/items/cards/card_dq"
+        },
+        "card_dk": {
+            "textures": "textures/items/cards/card_dk"
+        },
+        "card_ca": {
+            "textures": "textures/items/cards/card_ca"
+        },
+        "card_c2": {
+            "textures": "textures/items/cards/card_c2"
+        },
+        "card_c3": {
+            "textures": "textures/items/cards/card_c3"
+        },
+        "card_c4": {
+            "textures": "textures/items/cards/card_c4"
+        },
+        "card_c5": {
+            "textures": "textures/items/cards/card_c5"
+        },
+        "card_c6": {
+            "textures": "textures/items/cards/card_c6"
+        },
+        "card_c7": {
+            "textures": "textures/items/cards/card_c7"
+        },
+        "card_c8": {
+            "textures": "textures/items/cards/card_c8"
+        },
+        "card_c9": {
+            "textures": "textures/items/cards/card_c9"
+        },
+        "card_c10": {
+            "textures": "textures/items/cards/card_c10"
+        },
+        "card_cj": {
+            "textures": "textures/items/cards/card_cj"
+        },
+        "card_cq": {
+            "textures": "textures/items/cards/card_cq"
+        },
+        "card_ck": {
+            "textures": "textures/items/cards/card_ck"
+        },
+        "card_back": {
+            "textures": "textures/items/cards/card_back"
         }
     }
 }
