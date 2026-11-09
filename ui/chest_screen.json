@@ -8,6 +8,7 @@
     "use_custom_pocket_toast": "$use_custom_pocket_toast",
 
     "$keyword_mines": "mines_ui",
+    "$keyword_mines_setup": "mines_setup",
     "$container_title_copy": "$container_title",
 
     "variables": [
@@ -25,6 +26,11 @@
       {
         "requires": "(not (($container_title_copy - $keyword_mines) = $container_title_copy))",
         "$screen_content": "mines_ui.mines_panel",
+        "$screen_background_alpha": 0.75
+      },
+      {
+        "requires": "(not (($container_title_copy - $keyword_mines_setup) = $container_title_copy))",
+        "$screen_content": "mines_ui.setup_panel",
         "$screen_background_alpha": 0.75
       }
     ]

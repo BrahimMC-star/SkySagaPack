@@ -24,66 +24,131 @@
     "layer": 4
   },
 
-  "mines_legend_item": {
+  //// Legende du bas : glyph (icone) + mot en texte normal ///////////////////////
+
+  "legend_glyph": {
     "type": "label",
-    "text": "$legend_text",
-    "color": "$legend_color",
+    "text": "$glyph",
+    "color": [ 1.0, 1.0, 1.0 ],
+    "font_scale_factor": 1.3,
+    "layer": 4
+  },
+
+  "legend_word": {
+    "type": "label",
+    "text": "$word",
+    "color": "$word_color",
     "shadow": true,
     "font_scale_factor": 0.8,
     "layer": 4
   },
 
-  "mines_legend": {
+  "legend_entry": {
     "type": "stack_panel",
     "orientation": "horizontal",
-    "size": [ "100%c", 10 ],
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "offset": [ 0, 19 ],
+    "size": [ "100%c", 12 ],
     "layer": 4,
     "controls": [
-      { "froid@mines_ui.mines_legend_item": { "$legend_text": "Froid  ", "$legend_color": [ 0.29, 0.48, 1.0 ] } },
-      { "tiede@mines_ui.mines_legend_item": { "$legend_text": "Tiede  ", "$legend_color": [ 0.35, 0.87, 0.42 ] } },
-      { "chaud@mines_ui.mines_legend_item": { "$legend_text": "Chaud  ", "$legend_color": [ 1.0, 0.85, 0.29 ] } },
-      { "brulant@mines_ui.mines_legend_item": { "$legend_text": "Brulant", "$legend_color": [ 1.0, 0.54, 0.16 ] } }
+      { "icon@mines_ui.legend_glyph": {} },
+      { "gap": { "type": "panel", "size": [ 3, 1 ] } },
+      { "word@mines_ui.legend_word": {} },
+      { "space": { "type": "panel", "size": [ 9, 1 ] } }
     ]
   },
 
-  "mines_title": {
+  "mines_legend": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 12 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -5 ],
+    "layer": 4,
+    "controls": [
+      { "cold@mines_ui.legend_entry": { "$glyph": "", "$word": "Froid", "$word_color": [ 0.35, 0.55, 1.0 ] } },
+      { "warm@mines_ui.legend_entry": { "$glyph": "", "$word": "Tiede", "$word_color": [ 0.35, 0.87, 0.42 ] } },
+      { "hot@mines_ui.legend_entry": { "$glyph": "", "$word": "Chaud", "$word_color": [ 1.0, 0.85, 0.29 ] } },
+      { "burning@mines_ui.legend_entry": { "$glyph": "", "$word": "Brulant", "$word_color": [ 1.0, 0.54, 0.16 ] } }
+    ]
+  },
+
+  "setup_hint": {
     "type": "label",
-    "text": "Mines",
+    "text": "Choisis ta mise et le nombre de mines",
+    "color": [ 0.6, 0.6, 0.7 ],
+    "shadow": true,
+    "font_scale_factor": 0.8,
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -6 ],
+    "layer": 4
+  },
+
+  //// Titres ///////////////////////////////////////////////////////////////////////
+
+  "screen_title": {
+    "type": "label",
+    "text": "$screen_title_text",
     "color": [ 1.0, 0.85, 0.29 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "offset": [ 0, 7 ],
+    "offset": [ 0, 6 ],
     "shadow": true,
     "layer": 4
   },
 
-  "mines_root": {
+  "bar": {
+    "type": "image",
+    "texture": "textures/ui/button_borderless_light",
+    "color": "$bar_color",
+    "size": [ 54, 18 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": "$bar_offset",
+    "layer": 2
+  },
+
+  "frame_bg": {
     "type": "panel",
-    "size": [ 190, 150 ],
-    "layer": 1,
+    "size": [ "100%", "100%" ],
     "controls": [
       { "bg": { "type": "image", "texture": "textures/ui/dark_bg", "size": [ "100%", "100%" ], "layer": 1 } },
-      { "frame": { "type": "image", "texture": "textures/ui/button_borderless_dark", "size": [ "100%", "100%" ], "layer": 2 } },
-      {
-        "cashout_bar": {
-          "type": "image",
-          "texture": "textures/ui/button_borderless_light",
-          "color": [ 0.25, 0.7, 0.35 ],
-          "size": [ 54, 18 ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ 68, 122 ],
-          "layer": 2
-        }
-      },
-      { "mines_title@mines_ui.mines_title": {} },
-      { "mines_legend@mines_ui.mines_legend": {} },
-      { "mines_grid@mines_ui.mines_grid": { "offset": [ 14, 32 ] } }
+      { "frame": { "type": "image", "texture": "textures/ui/button_borderless_dark", "size": [ "100%", "100%" ], "layer": 2 } }
     ]
   },
+
+  //// Ecran de jeu (titre "mines_ui") ///////////////////////////////////////////////
+
+  "mines_root": {
+    "type": "panel",
+    "size": [ 190, 152 ],
+    "layer": 1,
+    "controls": [
+      { "bg@mines_ui.frame_bg": {} },
+      { "cashout_bar@mines_ui.bar": { "$bar_color": [ 0.25, 0.7, 0.35 ], "$bar_offset": [ 68, 109 ] } },
+      { "title@mines_ui.screen_title": { "$screen_title_text": "Mines" } },
+      { "grid@mines_ui.mines_grid": { "offset": [ 14, 19 ] } },
+      { "legend@mines_ui.mines_legend": {} }
+    ]
+  },
+
+  //// Ecran de mise (titre "mines_setup") //////////////////////////////////////////
+
+  "setup_root": {
+    "type": "panel",
+    "size": [ 190, 152 ],
+    "layer": 1,
+    "controls": [
+      { "bg@mines_ui.frame_bg": {} },
+      { "cancel_bar@mines_ui.bar": { "$bar_color": [ 0.75, 0.25, 0.25 ], "$bar_offset": [ 14, 109 ] } },
+      { "start_bar@mines_ui.bar": { "$bar_color": [ 0.25, 0.7, 0.35 ], "$bar_offset": [ 68, 109 ] } },
+      { "title@mines_ui.screen_title": { "$screen_title_text": "Nouvelle partie" } },
+      { "grid@mines_ui.mines_grid": { "offset": [ 14, 19 ] } },
+      { "hint@mines_ui.setup_hint": {} }
+    ]
+  },
+
+  //// Panneaux d'ecran (sans inventaire du joueur) ///////////////////////////////////
 
   "mines_panel": {
     "type": "panel",
@@ -101,10 +166,39 @@
       },
       {
         "root_panel@common.root_panel": {
-          "size": [ 190, 150 ],
+          "size": [ 190, 152 ],
           "layer": 1,
           "controls": [
             { "mines_root@mines_ui.mines_root": {} },
+            { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "setup_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [ 190, 152 ],
+          "layer": 1,
+          "controls": [
+            { "setup_root@mines_ui.setup_root": {} },
             { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } },
             { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
             { "gamepad_cursor@common.gamepad_cursor_button": {} }
