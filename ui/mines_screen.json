@@ -144,8 +144,6 @@
     "layer": 1,
     "controls": [
       { "bg@mines_ui.frame_bg": {} },
-      { "cancel_bar@mines_ui.bar": { "$bar_texture": "textures/ui/button_red", "$bar_alpha": 0.55, "$bar_offset": [ 24, 109 ] } },
-      { "start_bar@mines_ui.bar": { "$bar_texture": "textures/ui/green", "$bar_alpha": 0.4, "$bar_offset": [ 78, 109 ] } },
       { "title@mines_ui.screen_title": { "$screen_title_text": "Nouvelle partie" } },
       { "grid@mines_ui.mines_grid": { "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 19 ] } },
       { "hint@mines_ui.setup_hint": {} }

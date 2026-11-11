@@ -12,26 +12,6 @@
         "bg@mines_ui.frame_bg": {}
       },
       {
-        "cancel_bar@mines_ui.bar": {
-          "$bar_texture": "textures/ui/button_red",
-          "$bar_alpha": 0.55,
-          "$bar_offset": [
-            24,
-            109
-          ]
-        }
-      },
-      {
-        "start_bar@mines_ui.bar": {
-          "$bar_texture": "textures/ui/green",
-          "$bar_alpha": 0.4,
-          "$bar_offset": [
-            78,
-            109
-          ]
-        }
-      },
-      {
         "title@mines_ui.screen_title": {
           "$screen_title_text": "Blackjack"
         }
