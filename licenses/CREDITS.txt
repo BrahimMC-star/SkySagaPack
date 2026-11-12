@@ -1,8 +1,0 @@
-Textures d'interface sombres (textures/ui, textures/gui) et couleurs de texte (ui/_global_variables.json)
-
-- Dark Mode, par Offroaders123 (Brandon Bennett), licence MIT
-  https://github.com/Offroaders123/Dark-Mode
-  Texte de la licence : Dark-Mode-Offroaders123-MIT.txt
-
-- Bedrock Dark Mode [Open Source], par TsPlaysMCBE (adaptation Bedrock de Dark Mode)
-  https://www.curseforge.com/members/tsplaysmcbe/projects
