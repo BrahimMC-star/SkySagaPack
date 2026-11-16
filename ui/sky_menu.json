@@ -6,13 +6,14 @@
   //// La couleur ($sky_accent) est choisie dans chest_screen.json / redstone_screen.json
   //// selon un mot-clé invisible au début du titre (codes couleur §).
 
-  //// Bande d'accent : remplace le liseré clair du haut du cadre (bordure de 3 px de dialog_background_opaque).
+  //// Bande d'accent : remplace le liseré clair du haut du cadre (lignes 1-2 de dialog_background_opaque).
+  //// Largeur en pixels fixes : un pourcentage donnait une bande de 2 px de large. Tous ces panneaux font 176 de large.
   "accent_bar": {
     "type": "image",
     "texture": "textures/sky_ui/white",
     "layer": 3,
-    "size": [ "100% - 6px", 2 ],
-    "offset": [ 0, 3 ],
+    "size": [ 174, 2 ],
+    "offset": [ 0, 1 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$sky_accent|default": [ 0.45, 0.45, 0.5 ],
