@@ -1,101 +1,710 @@
 {
+  //// Thème sombre des menus InvMenu / VirtualInventory (concept B) : en-tête 18 px + bande d'accent,
+  //// corps sombre, pied plus foncé pour l'inventaire. Couleurs dans chest_screen.json / redstone_screen.json.
+  //// IMPORTANT : chaque image a "keep_ratio": false, sinon Bedrock garde le ratio 1:1 de la texture
+  //// (c'est ce qui donnait le petit carré à la place de la bande).
+
   "namespace": "sky_menu",
-
-  //// Menus InvMenu / VirtualInventory : on garde les panneaux vanilla (déjà sombres via le Dark Mode du pack)
-  //// et on ajoute seulement une bande de couleur sur le bord du haut.
-  //// La couleur ($sky_accent) est choisie dans chest_screen.json / redstone_screen.json
-  //// selon un mot-clé invisible au début du titre (codes couleur §).
-
-  //// Bande d'accent : remplace le liseré clair du haut du cadre (lignes 1-2 de dialog_background_opaque).
-  //// Largeur en pixels fixes : un pourcentage donnait une bande de 2 px de large. Tous ces panneaux font 176 de large.
-  "accent_bar": {
-    "type": "image",
-    "texture": "textures/sky_ui/white",
-    "layer": 3,
-    "size": [ 174, 2 ],
-    "offset": [ 0, 1 ],
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "$sky_accent|default": [ 0.45, 0.45, 0.5 ],
-    "color": "$sky_accent"
-  },
-
-  //// Copies de chest.small_chest_panel / chest.large_chest_panel (vanilla) + la bande d'accent.
   "small_chest_panel": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "selected_item_details_factory@common.selected_item_details_factory": {} },
-      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
       {
         "root_panel@common.root_panel": {
+          "size": [
+            176,
+            174
+          ],
           "layer": 1,
           "controls": [
-            { "common_panel@common.common_panel": {} },
-            { "sky_accent@sky_menu.accent_bar": {} },
+            {
+              "outline": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": [
+                  0,
+                  0,
+                  0
+                ],
+                "size": [
+                  178,
+                  176
+                ],
+                "layer": 1,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "bg": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_bg",
+                "size": [
+                  176,
+                  174
+                ],
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "header_bg": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_header",
+                "size": [
+                  176,
+                  18
+                ],
+                "layer": 3,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "accent": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_accent",
+                "size": [
+                  176,
+                  2
+                ],
+                "layer": 4,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  16
+                ]
+              }
+            },
+            {
+              "footer_bg": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_footer",
+                "size": [
+                  176,
+                  93
+                ],
+                "layer": 3,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "footer_line": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": [
+                  0.04,
+                  0.04,
+                  0.05
+                ],
+                "size": [
+                  176,
+                  1
+                ],
+                "layer": 4,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [
+                  0,
+                  -92
+                ]
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "layer": 5,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  7,
+                  5
+                ],
+                "size": [
+                  150,
+                  10
+                ],
+                "text": "$container_title",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": true,
+                "localize": "$localize_title",
+                "enable_profanity_filter": true
+              }
+            },
+            {
+              "close@common.close_button": {
+                "layer": 6,
+                "size": [
+                  14,
+                  14
+                ],
+                "$close_button_offset": [
+                  -2,
+                  2
+                ],
+                "$close_button_panel_size": [
+                  12,
+                  12
+                ]
+              }
+            },
             {
               "chest_panel": {
                 "type": "panel",
                 "layer": 5,
                 "controls": [
-                  { "small_chest_panel_top_half@chest.small_chest_panel_top_half": {} },
-                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
-                  { "hotbar_grid@common.hotbar_grid_template": {} },
-                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-                  { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+                  {
+                    "grid@chest.small_chest_grid": {
+                      "offset": [
+                        7,
+                        22
+                      ]
+                    }
+                  },
+                  {
+                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}
+                  },
+                  {
+                    "hotbar_grid@common.hotbar_grid_template": {}
+                  },
+                  {
+                    "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                  },
+                  {
+                    "flying_item_renderer@common.flying_item_renderer": {
+                      "layer": 15
+                    }
+                  }
                 ]
               }
             },
-            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
           ]
         }
       }
     ]
   },
-
   "large_chest_panel": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "selected_item_details_factory@common.selected_item_details_factory": { "control_name": "@chest.selected_item_details" } },
-      { "item_lock_notification_factory@common.item_lock_notification_factory": { "control_name": "@common.item_lock_notification" } },
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
       {
         "root_panel@common.root_panel": {
-          "size": [ 176, 220 ],
+          "size": [
+            176,
+            228
+          ],
           "layer": 1,
           "controls": [
-            { "common_panel@common.common_panel": {} },
-            { "sky_accent@sky_menu.accent_bar": {} },
+            {
+              "outline": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": [
+                  0,
+                  0,
+                  0
+                ],
+                "size": [
+                  178,
+                  230
+                ],
+                "layer": 1,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "bg": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_bg",
+                "size": [
+                  176,
+                  228
+                ],
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "header_bg": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_header",
+                "size": [
+                  176,
+                  18
+                ],
+                "layer": 3,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "accent": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_accent",
+                "size": [
+                  176,
+                  2
+                ],
+                "layer": 4,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  16
+                ]
+              }
+            },
+            {
+              "footer_bg": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_footer",
+                "size": [
+                  176,
+                  93
+                ],
+                "layer": 3,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "footer_line": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": [
+                  0.04,
+                  0.04,
+                  0.05
+                ],
+                "size": [
+                  176,
+                  1
+                ],
+                "layer": 4,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [
+                  0,
+                  -92
+                ]
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "layer": 5,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  7,
+                  5
+                ],
+                "size": [
+                  150,
+                  10
+                ],
+                "text": "$container_title",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": true,
+                "localize": "$localize_title",
+                "enable_profanity_filter": true
+              }
+            },
+            {
+              "close@common.close_button": {
+                "layer": 6,
+                "size": [
+                  14,
+                  14
+                ],
+                "$close_button_offset": [
+                  -2,
+                  2
+                ],
+                "$close_button_panel_size": [
+                  12,
+                  12
+                ]
+              }
+            },
             {
               "chest_panel": {
                 "type": "panel",
                 "layer": 5,
                 "controls": [
-                  { "large_chest_panel_top_half@chest.large_chest_panel_top_half": {} },
-                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
-                  { "hotbar_grid@common.hotbar_grid_template": {} },
-                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-                  { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+                  {
+                    "grid@chest.large_chest_grid": {
+                      "offset": [
+                        7,
+                        22
+                      ]
+                    }
+                  },
+                  {
+                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}
+                  },
+                  {
+                    "hotbar_grid@common.hotbar_grid_template": {}
+                  },
+                  {
+                    "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                  },
+                  {
+                    "flying_item_renderer@common.flying_item_renderer": {
+                      "layer": 15
+                    }
+                  }
                 ]
               }
             },
-            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
           ]
         }
       }
     ]
   },
-
-  //// Hopper : redstone.panel (vanilla) place $screen_label dans son root_panel.
-  //// On y met le titre vanilla + la bande d'accent, sans toucher au reste.
-  "hopper_label": {
+  "hopper_grid": {
+    "type": "grid",
+    "size": [
+      90,
+      18
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [
+      5,
+      1
+    ],
+    "grid_item_template": "chest.chest_grid_item",
+    "collection_name": "container_items"
+  },
+  "hopper_panel": {
     "type": "panel",
-    "size": [ "100%", "100%" ],
     "controls": [
-      { "label@redstone.hopper_label": {} },
-      { "sky_accent@sky_menu.accent_bar": {} }
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [
+            176,
+            138
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "outline": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": [
+                  0,
+                  0,
+                  0
+                ],
+                "size": [
+                  178,
+                  140
+                ],
+                "layer": 1,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "bg": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_bg",
+                "size": [
+                  176,
+                  138
+                ],
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "header_bg": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_header",
+                "size": [
+                  176,
+                  18
+                ],
+                "layer": 3,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "accent": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_accent",
+                "size": [
+                  176,
+                  2
+                ],
+                "layer": 4,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  16
+                ]
+              }
+            },
+            {
+              "footer_bg": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": "$sky_footer",
+                "size": [
+                  176,
+                  93
+                ],
+                "layer": 3,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "footer_line": {
+                "type": "image",
+                "texture": "textures/sky_ui/white",
+                "keep_ratio": false,
+                "color": [
+                  0.04,
+                  0.04,
+                  0.05
+                ],
+                "size": [
+                  176,
+                  1
+                ],
+                "layer": 4,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [
+                  0,
+                  -92
+                ]
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "layer": 5,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  7,
+                  5
+                ],
+                "size": [
+                  150,
+                  10
+                ],
+                "text": "$container_title",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": true,
+                "localize": "$localize_title",
+                "enable_profanity_filter": true
+              }
+            },
+            {
+              "close@common.close_button": {
+                "layer": 6,
+                "size": [
+                  14,
+                  14
+                ],
+                "$close_button_offset": [
+                  -2,
+                  2
+                ],
+                "$close_button_panel_size": [
+                  12,
+                  12
+                ]
+              }
+            },
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  {
+                    "grid@sky_menu.hopper_grid": {
+                      "offset": [
+                        43,
+                        22
+                      ]
+                    }
+                  },
+                  {
+                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}
+                  },
+                  {
+                    "hotbar_grid@common.hotbar_grid_template": {}
+                  },
+                  {
+                    "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                  },
+                  {
+                    "flying_item_renderer@common.flying_item_renderer": {
+                      "layer": 15
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      }
     ]
   }
 }
