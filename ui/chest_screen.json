@@ -1,71 +1,5 @@
 {
   "namespace": "chest",
-  "small_chest_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "$use_custom_pocket_toast|default": false,
-    "close_on_player_hurt": "$close_on_player_hurt",
-    "use_custom_pocket_toast": "$use_custom_pocket_toast",
-    "$container_title_copy": "$container_title",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "sky_menu.small_panel",
-        "$screen_bg_content": "common.screen_background",
-        "$screen_background_alpha": 0.4
-      },
-      {
-        "requires": "$pocket_screen",
-        "$use_custom_pocket_toast": true,
-        "$screen_content": "sky_menu.small_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_gold) = $container_title_copy))",
-        "$sky_accent": [
-          0.91,
-          0.72,
-          0.16
-        ]
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_green) = $container_title_copy))",
-        "$sky_accent": [
-          0.3,
-          0.79,
-          0.3
-        ]
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_blue) = $container_title_copy))",
-        "$sky_accent": [
-          0.25,
-          0.66,
-          0.96
-        ]
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_purple) = $container_title_copy))",
-        "$sky_accent": [
-          0.64,
-          0.36,
-          0.94
-        ]
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_red) = $container_title_copy))",
-        "$sky_accent": [
-          0.88,
-          0.33,
-          0.33
-        ]
-      }
-    ],
-    "$kw_sky_gold": "§6§2§r",
-    "$kw_sky_green": "§2§6§r",
-    "$kw_sky_blue": "§9§3§r",
-    "$kw_sky_purple": "§5§d§r",
-    "$kw_sky_red": "§4§c§r"
-  },
   "large_chest_screen@common.inventory_screen_common": {
     "$close_on_player_hurt|default": true,
     "$use_custom_pocket_toast|default": false,
@@ -83,55 +17,14 @@
     "variables": [
       {
         "requires": "$desktop_screen",
-        "$screen_content": "sky_menu.large_panel",
+        "$screen_content": "chest.large_chest_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.4
       },
       {
         "requires": "$pocket_screen",
         "$use_custom_pocket_toast": true,
-        "$screen_content": "sky_menu.large_panel",
-        "$screen_bg_content": "common.screen_background"
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_gold) = $container_title_copy))",
-        "$sky_accent": [
-          0.91,
-          0.72,
-          0.16
-        ]
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_green) = $container_title_copy))",
-        "$sky_accent": [
-          0.3,
-          0.79,
-          0.3
-        ]
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_blue) = $container_title_copy))",
-        "$sky_accent": [
-          0.25,
-          0.66,
-          0.96
-        ]
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_purple) = $container_title_copy))",
-        "$sky_accent": [
-          0.64,
-          0.36,
-          0.94
-        ]
-      },
-      {
-        "requires": "(not (($container_title_copy - $kw_sky_red) = $container_title_copy))",
-        "$sky_accent": [
-          0.88,
-          0.33,
-          0.33
-        ]
+        "$screen_content": "pocket_containers.large_chest_panel"
       },
       {
         "requires": "(not (($container_title_copy - $keyword_mines) = $container_title_copy))",
@@ -173,11 +66,6 @@
         "$screen_content": "blackjack_ui.result_panel_push",
         "$screen_background_alpha": 0.75
       }
-    ],
-    "$kw_sky_gold": "§6§2§r",
-    "$kw_sky_green": "§2§6§r",
-    "$kw_sky_blue": "§9§3§r",
-    "$kw_sky_purple": "§5§d§r",
-    "$kw_sky_red": "§4§c§r"
+    ]
   }
 }
