@@ -1,0 +1,75 @@
+{
+  "namespace": "casino_ui",
+
+  //// Briques communes aux ecrans du casino //////////////////////////////////////////
+
+  // Label qui affiche le nom de l'item d'un slot, sans survol.
+  // L'item doit avoir un nom court et SANS lore (le lore est inclus dans #hover_text).
+  // Usage : { "bet@casino_ui.slot_text": { "collection_index": 46 } }
+  "slot_text": {
+    "type": "label",
+    "text": "#hover_text",
+    "shadow": true,
+    "$text_scale|default": 1.0,
+    "$text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$text_alignment|default": "left",
+    "font_scale_factor": "$text_scale",
+    "color": "$text_color",
+    "text_alignment": "$text_alignment",
+    "size": [ "default", 10 ],
+    "layer": 6,
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      }
+    ]
+  },
+
+  // Vrai slot cliquable, place individuellement.
+  // Usage : { "cashout@casino_ui.slot": { "collection_index": 49 } }
+  "slot@common.container_item": {
+    "$item_collection_name": "container_items",
+    "$slot_bg|default": "mines_ui.mines_cell_bg",
+    "$background_images": "$slot_bg",
+    "$slot_size|default": [ 18, 18 ],
+    "size": "$slot_size",
+    "layer": 4
+  },
+
+  // Panneau visible uniquement si le nom de l'item du slot contient $keyword
+  // (ex. un code couleur invisible comme "§s§e§l").
+  // Usage : { "x@casino_ui.if_slot_contains": { "collection_index": 30, "$keyword": "§s§e§l", "controls": [ ... ] } }
+  "if_slot_contains": {
+    "type": "panel",
+    "layer": 5,
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hover_text - $keyword) = #hover_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  //// Animations ////////////////////////////////////////////////////////////////////
+
+  // Halo qui respire (boucle)
+  "pulse_in": { "anim_type": "alpha", "easing": "in_out_sine", "duration": 0.8, "from": 0.15, "to": 0.6, "next": "@casino_ui.pulse_out" },
+  "pulse_out": { "anim_type": "alpha", "easing": "in_out_sine", "duration": 0.8, "from": 0.6, "to": 0.15, "next": "@casino_ui.pulse_in" },
+
+  "pulse_glow": {
+    "type": "image",
+    "texture": "$glow_texture",
+    "$glow_texture|default": "textures/ui/green",
+    "alpha": 0.15,
+    "anims": [ "@casino_ui.pulse_in" ],
+    "layer": 3
+  }
+}

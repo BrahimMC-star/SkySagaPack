@@ -123,15 +123,51 @@
 
   //// Ecran de jeu (titre "mines_ui") ///////////////////////////////////////////////
 
+  // Grille de jeu : seulement les 45 cases (slots 0-44). La ligne du bas est dessinee par mines_hud.
+  "mines_game_grid@mines_ui.mines_grid": {
+    "size": [ 162, 90 ],
+    "grid_dimensions": [ 9, 5 ]
+  },
+
+  // Une ligne de stat = le nom de l'item du slot, lu en texte (voir casino_common.json)
+  "hud_line@casino_ui.slot_text": {
+    "$text_scale": 0.55,
+    "anchor_from": "$line_anchor",
+    "anchor_to": "$line_anchor"
+  },
+
+  // Ligne du bas : Mise / Mines a gauche, Encaisser au centre, Gain additionnel / Gain potentiel a droite
+  "mines_hud": {
+    "type": "panel",
+    "size": [ 196, 24 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 111 ],
+    "collection_name": "container_items",
+    "layer": 3,
+    "controls": [
+      { "hud_bg": { "type": "image", "texture": "textures/ui/Black", "alpha": 0.35, "layer": 2 } },
+
+      { "bet@mines_ui.hud_line":   { "collection_index": 46, "$line_anchor": "top_left", "offset": [ 3, 2 ] } },
+      { "mines@mines_ui.hud_line": { "collection_index": 47, "$line_anchor": "bottom_left", "offset": [ 3, -2 ] } },
+
+      { "cashout_glow@casino_ui.pulse_glow": { "size": [ 26, 22 ], "anchor_from": "center", "anchor_to": "center" } },
+      { "cashout@casino_ui.slot": { "collection_index": 49, "anchor_from": "center", "anchor_to": "center" } },
+
+      { "extra@mines_ui.hud_line": { "collection_index": 51, "$text_alignment": "right", "$line_anchor": "top_right", "offset": [ -3, 2 ] } },
+      { "gain@mines_ui.hud_line":  { "collection_index": 52, "$text_alignment": "right", "$line_anchor": "bottom_right", "offset": [ -3, -2 ] } }
+    ]
+  },
+
   "mines_root": {
     "type": "panel",
     "size": [ 210, 152 ],
     "layer": 1,
     "controls": [
       { "bg@mines_ui.frame_bg": {} },
-      { "cashout_bar@mines_ui.bar": { "$bar_texture": "textures/ui/green", "$bar_alpha": 0.4, "$bar_offset": [ 78, 109 ] } },
       { "title@mines_ui.screen_title": { "$screen_title_text": "Mines" } },
-      { "grid@mines_ui.mines_grid": { "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 19 ] } },
+      { "grid@mines_ui.mines_game_grid": { "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 19 ] } },
+      { "hud@mines_ui.mines_hud": {} },
       { "legend@mines_ui.mines_legend": {} }
     ]
   },
