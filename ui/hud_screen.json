@@ -1,0 +1,90 @@
+{
+  "namespace": "hud",
+
+  //// Boss bars texturees //////////////////////////////////////////////////////////
+  //
+  // Le serveur (BossBarColor::toNetwork dans le Core) met en tete du titre
+  // le code couleur repete 3 fois puis §r, ex. "§d§d§d§r Drop Party".
+  // On lit ce prefixe dans #bossName et on affiche textures/bossbar/<couleur>_empty|filled.
+  // Sans prefixe connu : textures/bossbar/default_*.
+  //
+  // Pour ajouter une couleur : un PNG 182x5 <nom>_empty + <nom>_filled,
+  // une ligne "bar_<nom>" ci-dessous, et la soustraction correspondante dans "bar_default".
+
+  // Remplace la barre vanilla (teintee par #bar_color) par la barre texturee.
+  "boss_health_panel": {
+    "controls": [
+      { "boss_name@hud.boss_name_panel": {} },
+      { "skysaga_boss_bar@hud.skysaga_boss_bar": { "offset": [ 0, 10 ] } }
+    ]
+  },
+
+  // Une paire vide/pleine, visible si $visible_expr est vrai pour le titre de la barre.
+  "skysaga_bar_pair": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "bindings": [
+      { "binding_name": "#bossName", "binding_type": "collection", "binding_collection_name": "boss_bars" },
+      { "binding_type": "view", "source_property_name": "$visible_expr", "target_property_name": "#visible" }
+    ],
+    "controls": [
+      { "empty": { "type": "image", "texture": "$bar_empty", "size": [ 182, 5 ], "layer": 1 } },
+      {
+        "filled": {
+          "type": "image",
+          "texture": "$bar_filled",
+          "size": [ 182, 5 ],
+          "clip_direction": "left",
+          "clip_pixelperfect": false,
+          "layer": 2,
+          "bindings": [
+            { "binding_name": "#progress_percentage", "binding_name_override": "#clip_ratio", "binding_type": "collection", "binding_collection_name": "boss_bars" }
+          ]
+        }
+      }
+    ]
+  },
+
+  // Couleur nommee : visible si le titre contient "§x§x§x"
+  "skysaga_bar_color@hud.skysaga_bar_pair": {
+    "$visible_expr": "(not ((#bossName - $bar_key) = #bossName))"
+  },
+
+  "skysaga_boss_bar": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "bar_default@hud.skysaga_bar_pair": { "$bar_empty": "textures/bossbar/default_empty", "$bar_filled": "textures/bossbar/default_filled", "$visible_expr": "(((((((((((((((((((((((((((((#bossName - '§0§0§0') - '§1§1§1') - '§2§2§2') - '§3§3§3') - '§4§4§4') - '§5§5§5') - '§6§6§6') - '§7§7§7') - '§8§8§8') - '§9§9§9') - '§a§a§a') - '§b§b§b') - '§c§c§c') - '§d§d§d') - '§e§e§e') - '§f§f§f') - '§g§g§g') - '§h§h§h') - '§i§i§i') - '§j§j§j') - '§m§m§m') - '§n§n§n') - '§p§p§p') - '§q§q§q') - '§s§s§s') - '§t§t§t') - '§u§u§u') - '§v§v§v') = #bossName)" } },
+      { "bar_black@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/black_empty", "$bar_filled": "textures/bossbar/black_filled", "$bar_key": "§0§0§0" } },
+      { "bar_dark_blue@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/dark_blue_empty", "$bar_filled": "textures/bossbar/dark_blue_filled", "$bar_key": "§1§1§1" } },
+      { "bar_dark_green@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/dark_green_empty", "$bar_filled": "textures/bossbar/dark_green_filled", "$bar_key": "§2§2§2" } },
+      { "bar_dark_aqua@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/dark_aqua_empty", "$bar_filled": "textures/bossbar/dark_aqua_filled", "$bar_key": "§3§3§3" } },
+      { "bar_dark_red@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/dark_red_empty", "$bar_filled": "textures/bossbar/dark_red_filled", "$bar_key": "§4§4§4" } },
+      { "bar_dark_purple@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/dark_purple_empty", "$bar_filled": "textures/bossbar/dark_purple_filled", "$bar_key": "§5§5§5" } },
+      { "bar_gold@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/gold_empty", "$bar_filled": "textures/bossbar/gold_filled", "$bar_key": "§6§6§6" } },
+      { "bar_gray@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/gray_empty", "$bar_filled": "textures/bossbar/gray_filled", "$bar_key": "§7§7§7" } },
+      { "bar_dark_gray@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/dark_gray_empty", "$bar_filled": "textures/bossbar/dark_gray_filled", "$bar_key": "§8§8§8" } },
+      { "bar_blue@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/blue_empty", "$bar_filled": "textures/bossbar/blue_filled", "$bar_key": "§9§9§9" } },
+      { "bar_green@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/green_empty", "$bar_filled": "textures/bossbar/green_filled", "$bar_key": "§a§a§a" } },
+      { "bar_aqua@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/aqua_empty", "$bar_filled": "textures/bossbar/aqua_filled", "$bar_key": "§b§b§b" } },
+      { "bar_red@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/red_empty", "$bar_filled": "textures/bossbar/red_filled", "$bar_key": "§c§c§c" } },
+      { "bar_light_purple@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/light_purple_empty", "$bar_filled": "textures/bossbar/light_purple_filled", "$bar_key": "§d§d§d" } },
+      { "bar_yellow@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/yellow_empty", "$bar_filled": "textures/bossbar/yellow_filled", "$bar_key": "§e§e§e" } },
+      { "bar_white@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/white_empty", "$bar_filled": "textures/bossbar/white_filled", "$bar_key": "§f§f§f" } },
+      { "bar_minecoin_gold@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/minecoin_gold_empty", "$bar_filled": "textures/bossbar/minecoin_gold_filled", "$bar_key": "§g§g§g" } },
+      { "bar_material_quartz@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_quartz_empty", "$bar_filled": "textures/bossbar/material_quartz_filled", "$bar_key": "§h§h§h" } },
+      { "bar_material_iron@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_iron_empty", "$bar_filled": "textures/bossbar/material_iron_filled", "$bar_key": "§i§i§i" } },
+      { "bar_material_netherite@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_netherite_empty", "$bar_filled": "textures/bossbar/material_netherite_filled", "$bar_key": "§j§j§j" } },
+      { "bar_material_redstone@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_redstone_empty", "$bar_filled": "textures/bossbar/material_redstone_filled", "$bar_key": "§m§m§m" } },
+      { "bar_material_copper@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_copper_empty", "$bar_filled": "textures/bossbar/material_copper_filled", "$bar_key": "§n§n§n" } },
+      { "bar_material_gold@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_gold_empty", "$bar_filled": "textures/bossbar/material_gold_filled", "$bar_key": "§p§p§p" } },
+      { "bar_material_emerald@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_emerald_empty", "$bar_filled": "textures/bossbar/material_emerald_filled", "$bar_key": "§q§q§q" } },
+      { "bar_material_diamond@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_diamond_empty", "$bar_filled": "textures/bossbar/material_diamond_filled", "$bar_key": "§s§s§s" } },
+      { "bar_material_lapis@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_lapis_empty", "$bar_filled": "textures/bossbar/material_lapis_filled", "$bar_key": "§t§t§t" } },
+      { "bar_material_amethyst@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_amethyst_empty", "$bar_filled": "textures/bossbar/material_amethyst_filled", "$bar_key": "§u§u§u" } },
+      { "bar_material_resin@hud.skysaga_bar_color": { "$bar_empty": "textures/bossbar/material_resin_empty", "$bar_filled": "textures/bossbar/material_resin_filled", "$bar_key": "§v§v§v" } }
+    ]
+  }
+}
