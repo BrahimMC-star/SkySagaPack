@@ -2,22 +2,28 @@
   "namespace": "casino_ui",
 
   //// Briques communes aux ecrans du casino //////////////////////////////////////////
+  //
+  // "collection_index" sur un controle isole est ignore par le jeu (tout retombe sur le slot 0).
+  // On passe donc par une vraie grille 9x6 (le jeu numerote lui-meme les cases 0-53),
+  // placee dans une fenetre "clips_children" qui ne laisse voir qu'une seule case.
+  //
+  // Decalage de la grille pour montrer le slot N (colonne = N % 9, ligne = N / 9) :
+  //   $grid_offset = [ -colonne * largeur_case, -ligne * hauteur_case ]
 
-  // Label qui affiche le nom de l'item d'un slot, sans survol.
-  // L'item doit avoir un nom court et SANS lore (le lore est inclus dans #hover_text).
-  // Usage : { "bet@casino_ui.slot_text": { "collection_index": 46 } }
-  "slot_text": {
+  //// Texte d'un slot ///////////////////////////////////////////////////////////////
+  // Affiche le nom de l'item du slot, sans survol. Item : nom court, SANS lore.
+  // Usage (slot 46, case de 84 px) :
+  //   { "bet@casino_ui.slot_text": { "$grid_offset": [ -84, -50 ] } }
+  // Texte aligne a droite : ajoute "$cell_template": "casino_ui.slot_text_cell_right"
+
+  // Les variables ne traversent pas les templates de grille : valeurs ecrites en dur.
+  "slot_text_cell": {
     "type": "label",
     "text": "#hover_text",
     "shadow": true,
-    "$text_scale|default": 1.0,
-    "$text_color|default": [ 1.0, 1.0, 1.0 ],
-    "$text_alignment|default": "left",
-    "font_scale_factor": "$text_scale",
-    "color": "$text_color",
-    "text_alignment": "$text_alignment",
-    "size": [ "default", 10 ],
-    "layer": 6,
+    "font_scale_factor": 0.55,
+    "text_alignment": "left",
+    "size": [ 84, 10 ],
     "bindings": [
       {
         "binding_name": "#hover_text",
@@ -27,33 +33,58 @@
     ]
   },
 
-  // Vrai slot cliquable, place individuellement.
-  // Usage : { "cashout@casino_ui.slot": { "collection_index": 49 } }
-  "slot@common.container_item": {
-    "$item_collection_name": "container_items",
-    "$slot_bg|default": "mines_ui.mines_cell_bg",
-    "$background_images": "$slot_bg",
-    "$slot_size|default": [ 18, 18 ],
-    "size": "$slot_size",
-    "layer": 4
+  "slot_text_cell_right@casino_ui.slot_text_cell": {
+    "text_alignment": "right"
   },
 
-  // Panneau visible uniquement si le nom de l'item du slot contient $keyword
-  // (ex. un code couleur invisible comme "§s§e§l").
-  // Usage : { "x@casino_ui.if_slot_contains": { "collection_index": 30, "$keyword": "§s§e§l", "controls": [ ... ] } }
-  "if_slot_contains": {
+  "slot_text": {
     "type": "panel",
-    "layer": 5,
-    "bindings": [
+    "$cell_template|default": "casino_ui.slot_text_cell",
+    "size": [ 84, 10 ],
+    "clips_children": true,
+    "layer": 6,
+    "controls": [
       {
-        "binding_name": "#hover_text",
-        "binding_type": "collection",
-        "binding_collection_name": "container_items"
-      },
+        "grid": {
+          "type": "grid",
+          "size": [ 756, 60 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": "$grid_offset",
+          "grid_dimensions": [ 9, 6 ],
+          "collection_name": "container_items",
+          "grid_item_template": "$cell_template"
+        }
+      }
+    ]
+  },
+
+  //// Slot cliquable ////////////////////////////////////////////////////////////////
+  // Usage (slot 49 = colonne 4, ligne 5) :
+  //   { "cashout@casino_ui.slot": { "$grid_offset": [ -72, -90 ] } }
+
+  "slot_cell@common.container_item": {
+    "$item_collection_name": "container_items",
+    "$background_images": "mines_ui.mines_cell_bg"
+  },
+
+  "slot": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "clips_children": true,
+    "layer": 4,
+    "controls": [
       {
-        "binding_type": "view",
-        "source_property_name": "(not ((#hover_text - $keyword) = #hover_text))",
-        "target_property_name": "#visible"
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 108 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": "$grid_offset",
+          "grid_dimensions": [ 9, 6 ],
+          "collection_name": "container_items",
+          "grid_item_template": "casino_ui.slot_cell"
+        }
       }
     ]
   },

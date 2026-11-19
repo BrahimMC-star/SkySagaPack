@@ -129,33 +129,27 @@
     "grid_dimensions": [ 9, 5 ]
   },
 
-  // Une ligne de stat = le nom de l'item du slot, lu en texte (voir casino_common.json)
-  "hud_line@casino_ui.slot_text": {
-    "$text_scale": 0.55,
-    "anchor_from": "$line_anchor",
-    "anchor_to": "$line_anchor"
-  },
-
-  // Ligne du bas : Mise / Mines a gauche, Encaisser au centre, Gain additionnel / Gain potentiel a droite
+  // Ligne du bas : Mise / Mines a gauche, Encaisser au centre, Gain additionnel / Gain potentiel a droite.
+  // Chaque element montre un seul slot via une grille decoupee (voir casino_common.json).
+  // Texte : case de 84x10 -> offset [ -colonne*84, -50 ]. Slot : case de 18 -> [ -colonne*18, -90 ].
   "mines_hud": {
     "type": "panel",
     "size": [ 196, 24 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 111 ],
-    "collection_name": "container_items",
     "layer": 3,
     "controls": [
       { "hud_bg": { "type": "image", "texture": "textures/ui/Black", "alpha": 0.35, "layer": 2 } },
 
-      { "bet@mines_ui.hud_line":   { "collection_index": 46, "$line_anchor": "top_left", "offset": [ 3, 2 ] } },
-      { "mines@mines_ui.hud_line": { "collection_index": 47, "$line_anchor": "bottom_left", "offset": [ 3, -2 ] } },
+      { "bet@casino_ui.slot_text":   { "$grid_offset": [ -84, -50 ],  "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 3, 2 ] } },
+      { "mines@casino_ui.slot_text": { "$grid_offset": [ -168, -50 ], "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 3, -2 ] } },
 
       { "cashout_glow@casino_ui.pulse_glow": { "size": [ 26, 22 ], "anchor_from": "center", "anchor_to": "center" } },
-      { "cashout@casino_ui.slot": { "collection_index": 49, "anchor_from": "center", "anchor_to": "center" } },
+      { "cashout@casino_ui.slot": { "$grid_offset": [ -72, -90 ], "anchor_from": "center", "anchor_to": "center" } },
 
-      { "extra@mines_ui.hud_line": { "collection_index": 51, "$text_alignment": "right", "$line_anchor": "top_right", "offset": [ -3, 2 ] } },
-      { "gain@mines_ui.hud_line":  { "collection_index": 52, "$text_alignment": "right", "$line_anchor": "bottom_right", "offset": [ -3, -2 ] } }
+      { "extra@casino_ui.slot_text": { "$grid_offset": [ -504, -50 ], "$cell_template": "casino_ui.slot_text_cell_right", "anchor_from": "top_right", "anchor_to": "top_right", "offset": [ -3, 2 ] } },
+      { "gain@casino_ui.slot_text":  { "$grid_offset": [ -588, -50 ], "$cell_template": "casino_ui.slot_text_cell_right", "anchor_from": "bottom_right", "anchor_to": "bottom_right", "offset": [ -3, -2 ] } }
     ]
   },
 
