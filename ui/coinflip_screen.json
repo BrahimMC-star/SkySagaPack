@@ -1,0 +1,139 @@
+{
+  "namespace": "coinflip_ui",
+
+  //// Duels de Pile ou Face (DuelCommand) ///////////////////////////////////////////
+  //
+  // Meme principe que Mines : la grille 9x6 complete + des elements a position fixe.
+  //   titre "cfd_lobby" : salon, une tete par duel ouvert (slots 0-35), boutons ligne 5
+  //   titre "cfd_duel"  : duel, createur slot 19, adversaire slot 25, piece slot 22
+  //
+  // Grille : ancree en haut au centre, decalee de 19 px -> x0 = (210 - 162) / 2 = 24.
+  // Slot N : x = 24 + (N % 9) * 18, y = 19 + (N / 9) * 18.
+
+  "hint": {
+    "type": "label",
+    "text": "$hint_text",
+    "color": [ 0.6, 0.6, 0.7 ],
+    "shadow": true,
+    "font_scale_factor": 0.8,
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -6 ],
+    "layer": 4
+  },
+
+  // Fond lumineux derriere une case (meme technique que cashout_bar dans Mines).
+  "slot_glow": {
+    "type": "image",
+    "texture": "$glow_texture",
+    "alpha": "$glow_alpha",
+    "$glow_alpha|default": 0.4,
+    "size": [ 18, 18 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": "$glow_offset",
+    "layer": 3
+  },
+
+  //// Salon (titre "cfd_lobby") ///////////////////////////////////////////////////////
+
+  "lobby_root": {
+    "type": "panel",
+    "size": [ 210, 152 ],
+    "layer": 1,
+    "controls": [
+      { "bg@mines_ui.frame_bg": {} },
+      { "title@mines_ui.screen_title": { "$screen_title_text": "Duels de Pile ou Face" } },
+      { "grid@mines_ui.mines_grid": { "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 19 ] } },
+      { "hint@coinflip_ui.hint": { "$hint_text": "Clique sur une tete pour accepter un duel" } }
+    ]
+  },
+
+  //// Duel (titre "cfd_duel") ///////////////////////////////////////////////////////
+
+  "vs_label": {
+    "type": "label",
+    "text": "VS",
+    "color": [ 1.0, 0.85, 0.29 ],
+    "shadow": true,
+    "font_scale_factor": 0.8,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 99, 77 ],
+    "layer": 5
+  },
+
+  "duel_root": {
+    "type": "panel",
+    "size": [ 210, 152 ],
+    "layer": 1,
+    "controls": [
+      { "bg@mines_ui.frame_bg": {} },
+      { "coin_glow@coinflip_ui.slot_glow": { "$glow_texture": "textures/ui/green", "$glow_offset": [ 96, 55 ] } },
+      { "title@mines_ui.screen_title": { "$screen_title_text": "Duel" } },
+      { "grid@mines_ui.mines_grid": { "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 19 ] } },
+      { "vs@coinflip_ui.vs_label": {} },
+      { "hint@coinflip_ui.hint": { "$hint_text": "Le gagnant remporte le pot" } }
+    ]
+  },
+
+  //// Panneaux d'ecran (sans inventaire du joueur) ///////////////////////////////////
+
+  "lobby_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [ 210, 152 ],
+          "layer": 1,
+          "controls": [
+            { "lobby_root@coinflip_ui.lobby_root": {} },
+            { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "duel_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "size": [ 210, 152 ],
+          "layer": 1,
+          "controls": [
+            { "duel_root@coinflip_ui.duel_root": {} },
+            { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  }
+}

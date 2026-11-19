@@ -74,6 +74,8 @@
     "$kw_bj_win": "bj_win",
     "$kw_bj_lose": "bj_lose",
     "$kw_bj_push": "bj_push",
+    "$kw_cfd_lobby": "cfd_lobby",
+    "$kw_cfd_duel": "cfd_duel",
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -144,6 +146,16 @@
       {
         "requires": "(not (($container_title_copy - $kw_bj_push) = $container_title_copy))",
         "$screen_content": "blackjack_ui.result_panel_push",
+        "$screen_background_alpha": 0.75
+      },
+      {
+        "requires": "(not (($container_title_copy - $kw_cfd_lobby) = $container_title_copy))",
+        "$screen_content": "coinflip_ui.lobby_panel",
+        "$screen_background_alpha": 0.75
+      },
+      {
+        "requires": "(not (($container_title_copy - $kw_cfd_duel) = $container_title_copy))",
+        "$screen_content": "coinflip_ui.duel_panel",
         "$screen_background_alpha": 0.75
       }
     ]

@@ -5,6 +5,7 @@
     "ui/casino_common.json",
     "ui/mines_screen.json",
     "ui/blackjack_screen.json",
+    "ui/coinflip_screen.json",
     "ui/sky_menu.json"
   ]
 }
